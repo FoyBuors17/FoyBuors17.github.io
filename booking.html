@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Tidy Fox Cleaning</title>
+    <link rel="icon" type="image/x-icon" href="images/tidyfoxhead.webp" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar">
+      <div class="nav-left">
+        <!-- Mobile Hamburger Menu -->
+        <div class="container">
+          <button id="burger" class="open-main-nav">
+            <span class="burger"></span>
+          </button>
+          <nav class="main-nav" id="main-nav">
+            <ul>
+              <li>
+                <a href="index.html">Home</a>
+              </li>
+              <li>
+                <a href="about.html">About</a>
+              </li>
+              <li>
+                <a href="checklist.html">Checklist</a>
+              </li>
+              <li>
+                <a href="faqs.html">FAQs</a>
+              </li>
+              <li>
+                <a href="#">Log In</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+
+        <div class="logo">
+          <a href="index.html">
+            <img src="images/Tidyfox-new-logo.webp" alt="Logo" />
+          </a>
+        </div>
+        <ul class="nav-links">
+          <li><a href="about.html">About</a></li>
+          <li><a href="checklist.html">Checklist</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
+          <li><a href="#">Log In</a></li>
+        </ul>
+      </div>
+      <a href="booking.html" class="booking-btn-link">
+        <button class="booking-btn">
+          Book Your Clean, Now
+          <span class="arrow">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+              class="arrow-svg"
+            >
+              <line
+                x1="9"
+                y1="19"
+                x2="32"
+                y2="19"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+              />
+              <polyline
+                points="22,9 32,19 22,29"
+                fill="none"
+                stroke="white"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </span>
+        </button>
+      </a>
+    </nav>
+    <!-- Booking Content -->
+    <div class="booking-container">
+      <div class="booking-header">
+        <h1>Book Your Cleaning Service now</h1>
+        <p>
+          Schedule your cleaning appointment and secure your booking with easy
+          online payment.
+        </p>
+      </div>
+
+      <!-- Launch27 Booking Widget -->
+      <div class="booking-widget-container">
+        <!-- Launch27 Official Embed Code -->
+        <script src="https://tidyfox.launch27.com/jsbundle"></script>
+        <iframe
+          id="booking-widget-iframe"
+          src="https://tidyfox.launch27.com/?w_cleaning"
+          style="
+            border: none;
+            width: 100%;
+            min-height: 2739px;
+            overflow: hidden;
+          "
+          scrolling="no"
+          title="Book Your Cleaning Service"
+        >
+        </iframe>
+      </div>
+    </div>
+
+    <script src="js/hamburger-menu.js"></script>
+  </body>
+</html>
