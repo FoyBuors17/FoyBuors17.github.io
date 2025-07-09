@@ -54,7 +54,7 @@ const reviews = [
   },
   {
     name: "Mary MacKenzie",
-    avatar: "images/MaryMacKenzie.png",
+    avatar: "images/MaryMackenzie.png",
     stars: 5,
     date: "07-05-2025",
     text: "I am very pleased with the friendliness, efficiency and high quality of Tidy Fox. They do an excellent job!"

@@ -949,6 +949,43 @@ nav {
   text-align: center;
 }
 
+/* Desktop Checklist Section Layout */
+@media (min-width: 769px) {
+  .checklist-section-row {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 4rem;
+    gap: 2rem;
+    padding: 0 2rem; /* Small padding to prevent touching edges */
+  }
+  
+  
+  .checklist-section-image {
+    flex: 0 0 80%; /* Fixed width for larger, more prominent images */
+    max-width: 80%;
+  }
+  
+  .checklist-section-image img {
+    width: 100%;
+    height: 500px; /* Fixed height for consistency */
+    object-fit: cover; /* Crop images to fit consistently */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.15);
+  }
+  
+  .checklist-section-column {
+    flex: 1;
+    max-width: 35%;
+    text-align: left;
+    padding: 0 1rem;
+  }
+  
+  .checklist-section-column h4 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+}
+
 
 
 
@@ -1163,6 +1200,57 @@ nav {
 /* Hide hamburger menu on desktop */
 .container {
   display: none;
+}
+
+/* Booking Page Styles */
+.booking-container {
+  padding-top: 60px; /* Account for fixed navbar */
+  background: #fff;
+  min-height: calc(100vh - 60px);
+}
+
+.booking-header {
+  padding: 2rem 1rem 1rem;
+  text-align: center;
+}
+
+.booking-header h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
+  margin-bottom: 1rem;
+}
+
+.booking-header p {
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.booking-widget-container {
+  padding: 0 1rem 2rem;
+}
+
+/* Ensure booking page footer flows naturally after content */
+.booking-container + .footer-distributed {
+  clear: both;
+  margin-top: 0;
+}
+
+/* Responsive booking styles */
+@media (max-width: 768px) {
+  .booking-header h1 {
+    font-size: 2rem;
+  }
+  
+  .booking-header p {
+    font-size: 1rem;
+  }
+  
+  .booking-widget-container {
+    padding: 0 0.5rem 1rem;
+  }
 }
 
 /* Mobile */
@@ -2147,6 +2235,11 @@ nav {
     width: 100%;
   }
 
+  /* Hide images on mobile */
+  .checklist-section-image {
+    display: none;
+  }
+
   .checklist-section-column h4 {
     font-size: 1.8rem;
     text-align: center;
@@ -2258,7 +2351,7 @@ nav {
 
 .additional-services {
   max-width: 1800px;
-  padding: 3rem 1rem 2rem 1rem;
+  padding: 2rem 1rem 2rem 1rem;
   text-align: center;
   background: var(--primary-color);
   margin: 0 auto;
@@ -2270,6 +2363,7 @@ nav {
   font-weight: 700;
   color: white;
   margin-bottom: 2.5rem;
+  margin-top: .5rem;
   text-align: center;
 }
 
