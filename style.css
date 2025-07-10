@@ -1867,6 +1867,10 @@ nav {
     margin-bottom: 20px;
   }
 
+  .reviews-row {
+    text-align: center;
+  }
+
   .review-card {
     width: 100%;
     max-width: 350px;
@@ -2561,8 +2565,8 @@ nav {
 
 .booking-header {
   text-align: center;
-  margin-bottom: 3rem;
-  padding: 2rem 0;
+  margin-bottom: 1rem;
+  padding: 1rem 0;
 }
 
 .booking-header h1 {
@@ -2571,6 +2575,7 @@ nav {
   color: var(--primary-color);
   margin-bottom: 1rem;
   line-height: 1.2;
+  text-align: center;
 }
 
 .booking-header p {
@@ -2967,6 +2972,183 @@ nav {
   
   .faq-answer p {
     font-size: 0.9rem;
+  }
+}
+
+/* Thank You Page Styles */
+.thankyou-section {
+  background: #fff;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.thankyou-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.thankyou-content {
+  display: flex;
+  align-items: center;
+  gap: 4rem;
+  background: white;
+  border-radius: 12px;
+  padding: 3rem;
+  /* box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f0f0f0; */
+}
+
+.thankyou-text {
+  flex: 1;
+  max-width: 60%;
+}
+
+.thankyou-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--tertiary-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.thankyou-subtitle {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--tertiary-color);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.thankyou-details {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 2rem;
+  line-height: 1.5;
+}
+
+.thankyou-app-info {
+  background: #f8f9fa;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border-left: 4px solid var(--primary-color);
+  border-top: 4px solid var(--primary-color);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.thankyou-app-info p {
+  font-size: 1.1rem;
+  color: var(--tertiary-color);
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.thankyou-app-info p:last-of-type {
+  margin-bottom: 1.5rem;
+}
+
+.launch27-logo {
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.launch27-logo img {
+  height: 40px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.thankyou-image {
+  flex: 0 0 350px;
+  max-width: 350px;
+}
+
+.thankyou-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Mobile Responsive Styles */
+@media (max-width: 768px) {
+  .thankyou-section {
+    padding: 2rem 0;
+    min-height: auto;
+  }
+  
+  .thankyou-container {
+    padding: 0 1rem;
+  }
+  
+  .thankyou-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 0;
+    padding: 2rem;
+  }
+  
+  .thankyou-text {
+    max-width: 100%;
+    flex: none;
+  }
+  
+  .thankyou-text h1 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .thankyou-subtitle {
+    font-size: 1.1rem;
+  }
+  
+  .thankyou-details {
+    font-size: 0.9rem;
+  }
+  
+  .thankyou-app-info {
+    margin-top: 1.5rem;
+    padding: 1rem;
+  }
+  
+  .thankyou-app-info p {
+    font-size: 1rem;
+  }
+  
+  .thankyou-image {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .thankyou-content {
+    padding: 1.5rem;
+  }
+  
+  .thankyou-text h1 {
+    font-size: 1.8rem;
+  }
+  
+  .thankyou-subtitle {
+    font-size: 1rem;
+  }
+  
+  .thankyou-details {
+    font-size: 0.85rem;
+  }
+  
+  .thankyou-app-info {
+    padding: 0.75rem;
+  }
+  
+  .thankyou-app-info p {
+    font-size: 0.9rem;
+  }
+  
+  .launch27-logo img {
+    height: 35px;
   }
 }
 
