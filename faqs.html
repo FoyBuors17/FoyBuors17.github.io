@@ -11,7 +11,7 @@
     <title>Tidy Fox Cleaning</title>
     <link rel="icon" type="image/x-icon" href="images/tidyfoxhead.webp" />
   </head>
-  <body>
+  <body class="faqs-page">
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-left">
@@ -87,7 +87,35 @@
         </button>
       </a>
     </nav>
-    <h1>FAQs</h1>
+
+    <div class="checklist-container">
+      <div class="checklist-content">
+        <h1>Frequently Asked Questions and Answers</h1>
+        <h3>
+          We've compiled answers to the most common questions about our cleaning
+          services, pricing, and policies to help you make an informed decision
+          about choosing Tidy Fox Cleaning.
+        </h3>
+      </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="faq-container">
+      <!-- Table of Contents Sidebar -->
+      <div class="faq-sidebar">
+        <h3 class="faq-toc-title">Table of content</h3>
+        <ul id="faq-toc" class="faq-toc">
+          <!-- Table of contents will be populated by JavaScript -->
+        </ul>
+      </div>
+
+      <!-- FAQ Content Area -->
+      <div class="faq-main">
+        <div id="faq-content" class="faq-content">
+          <!-- FAQ sections will be populated by JavaScript -->
+        </div>
+      </div>
+    </div>
 
     <!-- Footer -->
     <footer class="footer-distributed">
@@ -155,5 +183,6 @@
       </div>
     </footer>
     <script src="js/hamburger-menu.js"></script>
+    <script src="faqs.js"></script>
   </body>
 </html>
