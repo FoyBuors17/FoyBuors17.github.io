@@ -1228,6 +1228,29 @@ nav {
   margin: 0 auto;
 }
 
+.booking-mobile-subtitle {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.95);
+  border: 2px solid var(--primary-color);
+  border-radius: 8px;
+  position: relative;
+  z-index: 10;
+}
+
+/* Hide on desktop */
+@media (min-width: 769px) {
+  .booking-mobile-subtitle {
+    display: none;
+  }
+}
+
 .booking-widget-container {
   padding: 0 1rem 2rem;
 }
@@ -1246,6 +1269,16 @@ nav {
   
   .booking-header p {
     font-size: 1rem;
+  }
+  
+  .booking-mobile-subtitle {
+    display: block !important;
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    text-align: center;
   }
   
   .booking-widget-container {
@@ -2651,6 +2684,16 @@ nav {
   
   .booking-header p {
     font-size: 1.1rem;
+  }
+  
+  .booking-mobile-subtitle {
+    display: block !important;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--primary-color) !important;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    text-align: center;
   }
   
   .booking-widget-container {
