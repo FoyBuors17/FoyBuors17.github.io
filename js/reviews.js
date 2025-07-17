@@ -20,8 +20,15 @@ const reviews = [
     date: "04-24-2025",
     text: "I have used Tidy Fox on two separate occasions and will be continuing to use them on a regular basis. I love being able to customize my cleaning needs on a website without having to talk to someone on the phone! The teams are always extremely throughout and leave my house clean and fresh!"
   },
+  {
+    name: "Kylie Greidanus",
+    avatar: "images/KylieGreidanus.png",
+    stars: 5,
+    date: "07-17-2025",
+    text: "Tidy Fox cleaners are great! The house is super clean and it was done quickly and efficiently and staff is super friendly. Will definitely book again. Thank you!"
+  }
   
-  
+
   {
     name: "Francesca Tan",
     avatar: "images/FrancescaTan.png",
