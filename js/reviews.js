@@ -27,7 +27,6 @@ const reviews = [
     date: "07-17-2025",
     text: "Tidy Fox cleaners are great! The house is super clean and it was done quickly and efficiently and staff is super friendly. Will definitely book again. Thank you!"
   },
-  
 
   {
     name: "Francesca Tan",
