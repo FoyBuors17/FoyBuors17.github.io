@@ -843,6 +843,18 @@ nav {
     .team-member-reverse {
       flex-direction: row-reverse;
     }
+    
+    .team-member-reverse .team-member-text {
+      text-align: right;
+    }
+    
+    .team-member-reverse .team-member-text h3 {
+      text-align: right;
+    }
+    
+    .team-member-reverse .team-role {
+      text-align: right;
+    }
   
     .team-member-image {
       flex: 0 0 300px;
@@ -863,7 +875,7 @@ nav {
     }
   
     .team-member-text h3 {
-      font-size: 1.8rem;
+      font-size: 4rem;
       font-weight: 600;
       color: var(--primary-color);
       margin-bottom: 0.5rem;
@@ -2086,7 +2098,7 @@ nav {
   }
 
   .team-member-text h3 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
 
   .team-member-text p {
