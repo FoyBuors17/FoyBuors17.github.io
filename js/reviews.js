@@ -65,7 +65,29 @@ const reviews = [
     date: "07-05-2025",
     text: "I am very pleased with the friendliness, efficiency and high quality of Tidy Fox. They do an excellent job!"
   },
+  {
+    name: "Farida Kothari",
+    avatar: "images/FaridaKothari.png",
+    stars: 5,
+    date: "10-05-2025",
+    text: "I had an excellent experience with Tidy Fox for the cleaning of our new home! Grace and Kendra came on short notice and did an amazing job. They were punctual and thorough. The management was also very responsive and prompt with their communication, which I appreciated tremendously.<br><br>It was SO easy to work with this team. I was impressed from beginning to end with their professionalism and quality. I would highly recommend Tidy Fox to anyone looking for a reliable, quality service!"
+  },
  
+  {
+    name: "Karlie Erickson",
+    avatar: "images/KarlieErickson.png",
+    stars: 5,
+    date: "10-08-2025",
+    text: "I have been using Tidy Fox for almost 2 years. It started with me hiring them for a one time clean. But I was so impressed afterwards with how great my place looked and felt. I have had Tidy Fox out once a month ever since. The staff are all friendly, efficient and thorough while cleaning my home.<br><br>This last cleaning I added on some of the additional services to do on-top of the regular checklist. And I’m so happy I did because the inside of my fridge looked clean enough to be brand new inside. Highly Recommend"
+  },
+
+  {
+    name: "Peter Dunne",
+    avatar: "images/PeterDunne.png",
+    stars: 5,
+    date: "10-30-2025",
+    text: "I am a senior and three years ago suffered minor agility issues so was finding it hard to keep up to date with my cleaning and minor household chores. I needed help and Tidy Fox came to the rescue.<br><br>Being happy with the service provided, I continued with them after my recuperation period.<br><br>They are easy to deal with, polite, friendly staff that do a good job. and at a price that should fit to most peoples budget, especially as you can vary what is done to make it fit your needs.<br><br>I can recommend their services.<br><br>Now I am moving away I will be fortunate to find a service anywhere near as good. I thank them for the excellent service provided over the years.<br><br><strong>Positive</strong><br>Responsiveness, Punctuality, Quality, Professionalism, Value<br><br><strong>Services</strong><br>General housekeeping, Standard cleaning"
+  },
   // Add more review objects here
 ];
 
