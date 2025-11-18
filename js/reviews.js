@@ -88,6 +88,30 @@ const reviews = [
     date: "10-30-2025",
     text: "I am a senior and three years ago suffered minor agility issues so was finding it hard to keep up to date with my cleaning and minor household chores. I needed help and Tidy Fox came to the rescue.<br><br>Being happy with the service provided, I continued with them after my recuperation period.<br><br>They are easy to deal with, polite, friendly staff that do a good job. and at a price that should fit to most peoples budget, especially as you can vary what is done to make it fit your needs.<br><br>I can recommend their services.<br><br>Now I am moving away I will be fortunate to find a service anywhere near as good. I thank them for the excellent service provided over the years.<br><br><strong>Positive</strong><br>Responsiveness, Punctuality, Quality, Professionalism, Value<br><br><strong>Services</strong><br>General housekeeping, Standard cleaning"
   },
+
+  {
+    name: "Grace Slack",
+    avatar: "images/GraceSlack.png",
+    stars: 5,
+    date: "11-17-2025",
+    text: "Great team, reached all of my expectations & more also very professional! Not to mention very loving to all animals."
+  },
+
+  {
+    name: "Nrdyck",
+    avatar: "images/NRDyck.png",
+    stars: 5,
+    date: "11-14-2025",
+    text: "We always come home to a beautiful clean house and our dogs love them. Highly recommend."
+  },
+
+  {
+    name: "Jenn Corbett",
+    avatar: "images/JennCorbett.png",
+    stars: 5,
+    date: "11-10-2025",
+    text: "Booked our 1st clean. Very happy with it. On time, professional and great communication. Would highly recommend"
+  },
   // Add more review objects here
 ];
 
