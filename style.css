@@ -3196,6 +3196,13 @@ nav {
   overflow: hidden !important;
 }
 
+/* Tablet Gift Card Styles */
+@media (max-width: 768px) {
+  #giftcard-widget-iframe {
+    min-height: 1600px !important;
+  }
+}
+
 /* Mobile Gift Card Styles */
 @media (max-width: 480px) {
   #giftcard-widget-iframe {
