@@ -3180,5 +3180,32 @@ nav {
   }
 }
 
+/* Gift Card Page Styles */
+.giftcard-widget-container {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+  box-sizing: border-box;
+}
 
+#giftcard-widget-iframe {
+  border: none !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 1100px !important;
+  overflow: hidden !important;
+}
 
+/* Mobile Gift Card Styles */
+@media (max-width: 480px) {
+  #giftcard-widget-iframe {
+    min-height: 1550px !important;
+    width: 100% !important;
+    max-width: 100vw !important;
+    margin-left: -1rem;
+    margin-right: -1rem;
+    padding: 0;
+    transform: scale(0.95);
+    transform-origin: top center;
+  }
+}

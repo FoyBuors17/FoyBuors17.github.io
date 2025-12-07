@@ -8,10 +8,10 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
-    <title>Tidy Fox Cleaning</title>
+    <title>Gift Cards - Tidy Fox Cleaning</title>
     <link rel="icon" type="image/x-icon" href="images/tidyfoxhead.webp" />
   </head>
-  <body>
+  <body class="faqs-page">
     <!-- Navbar -->
     <nav class="navbar">
       <div class="nav-left">
@@ -53,7 +53,7 @@
           <li><a href="about.html">About</a></li>
           <li><a href="checklist.html">Checklist</a></li>
           <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="giftcard.html">Gift Card</a></li>
+          <li><a href="giftcard.html" class="active">Gift Card</a></li>
           <li><a href="http://tidyfox.launch27.com/login">Log In</a></li>
         </ul>
       </div>
@@ -92,45 +92,28 @@
       </a>
     </nav>
 
-    <!-- Thank You Section -->
-    <section class="thankyou-section">
-      <div class="thankyou-container">
-        <div class="thankyou-content">
-          <div class="thankyou-text">
-            <h1>Thanks! You're Awesome. Seriously.</h1>
-            <p class="thankyou-subtitle">
-              We are processing your booking now. You will receive an e-mail
-              confirmation shortly.
-            </p>
-            <p class="thankyou-details">
-              Look for our email (From: Tidy Fox Cleaning Services
-              &lt;support+tidyfox@launch27mail.com&gt;) with your confirmation.
-            </p>
-            <div class="thankyou-app-info">
-              <p>
-                You will get an invite to confirm your e-mail address and start
-                your own private Tidy Fox Account through our booking app
-                (Launch27).
-              </p>
-              <p>
-                We use a secure and safe booking application and you have your
-                own private account to make it easier to book your next
-                appointment with us.
-              </p>
-              <!-- <div class="launch27-logo">
-                <img src="images/launch-grey.webp" alt="Launch27 Logo" />
-              </div> -->
-            </div>
-          </div>
-          <div class="thankyou-image">
-            <img
-              src="images/lesia pic 3_PNG.avif"
-              alt="Lesia Buors - Tidy Fox Owner"
-            />
-          </div>
-        </div>
+    <div class="checklist-container">
+      <div class="checklist-content">
+        <h1>Give the Gift of a Clean Home</h1>
+        <h3>
+          Treat someone special to the gift of time and relaxation with a Tidy
+          Fox Cleaning gift card.
+        </h3>
       </div>
-    </section>
+    </div>
+
+    <!-- Main Content -->
+    <div
+      class="giftcard-widget-container"
+      style="text-align: center; margin: 30px 0; padding: 0 1rem"
+    >
+      <script src="https://tidyfox.launch27.com/jsbundle"></script>
+      <iframe
+        id="giftcard-widget-iframe"
+        src="https://tidyfox.launch27.com/giftcards/new?w"
+        scrolling="no"
+      ></iframe>
+    </div>
 
     <!-- Footer -->
     <footer class="footer-distributed">
@@ -199,7 +182,6 @@
         </div>
       </div>
     </footer>
-
     <script src="js/hamburger-menu.js"></script>
   </body>
 </html>
