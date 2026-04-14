@@ -10,16 +10,16 @@ if (burger && nav) {
     document.body.appendChild(wedgeCloseArea);
 
     function unlockBodyScroll() {
-        document.body.style.position = '';
-        document.body.style.top = '';
-        document.body.style.width = '';
+        document.body.style.removeProperty('--body-scroll-lock-top');
     }
 
     function lockBodyScroll() {
-        scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
-        document.body.style.position = 'fixed';
-        document.body.style.top = `-${scrollPosition}px`;
-        document.body.style.width = '100%';
+        scrollPosition =
+            window.pageYOffset || document.documentElement.scrollTop || 0;
+        document.body.style.setProperty(
+            '--body-scroll-lock-top',
+            `-${scrollPosition}px`
+        );
     }
 
     function closeMenu() {
@@ -47,10 +47,16 @@ if (burger && nav) {
     // Prevent sticky no-scroll state on Android/Samsung after restores.
     window.addEventListener('pageshow', forceMenuClosed);
     document.addEventListener('visibilitychange', function () {
-        if (document.visibilityState === 'visible' && !nav.classList.contains('is-open')) {
+        if (
+            document.visibilityState === 'visible' &&
+            !nav.classList.contains('is-open')
+        ) {
             unlockBodyScroll();
         }
     });
+
+    // Script is at end of <body>; clear any stale lock as soon as possible.
+    forceMenuClosed();
 
     burger.addEventListener('click', function () {
         if (!nav.classList.contains('is-open')) {
