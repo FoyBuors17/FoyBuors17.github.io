@@ -1,54 +1,69 @@
-// Hamburger menu functionality will be added here
+let burger = document.getElementById('burger');
+let nav = document.getElementById('main-nav');
+let scrollPosition = 0;
 
-let burger = document.getElementById('burger'),
-    nav = document.getElementById('main-nav'),
-    scrollPosition = 0;
+// Avoid runtime errors on pages that don't include the mobile menu.
+if (burger && nav) {
+    // Create the wedge close area element
+    let wedgeCloseArea = document.createElement('div');
+    wedgeCloseArea.className = 'wedge-close-area';
+    document.body.appendChild(wedgeCloseArea);
 
-// Create the wedge close area element
-let wedgeCloseArea = document.createElement('div');
-wedgeCloseArea.className = 'wedge-close-area';
-document.body.appendChild(wedgeCloseArea);
-
-function closeMenu() {
-    // Closing menu - restore scroll position
-    burger.classList.remove('is-open');
-    nav.classList.remove('is-open');
-    document.body.classList.remove('menu-open');
-    
-    // Remove fixed positioning and restore scroll
-    document.body.style.position = '';
-    document.body.style.top = '';
-    document.body.style.width = '';
-    window.scrollTo(0, scrollPosition);
-}
-
-function openMenu() {
-    // Opening menu - store current scroll position
-    scrollPosition = window.pageYOffset;
-    
-    // Apply the scroll offset to maintain visual position
-    document.body.style.position = 'fixed';
-    document.body.style.top = `-${scrollPosition}px`;
-    document.body.style.width = '100%';
-    
-    burger.classList.add('is-open');
-    nav.classList.add('is-open');
-    document.body.classList.add('menu-open');
-}
-
-burger.addEventListener('click', function(e) {
-    const isMenuOpen = nav.classList.contains('is-open');
-    
-    if (!isMenuOpen) {
-        openMenu();
-    } else {
-        closeMenu();
+    function unlockBodyScroll() {
+        document.body.style.position = '';
+        document.body.style.top = '';
+        document.body.style.width = '';
     }
-});
 
-// Close menu when clicking on the visible background wedge area
-wedgeCloseArea.addEventListener('click', function(e) {
-    if (nav.classList.contains('is-open')) {
-        closeMenu();
+    function lockBodyScroll() {
+        scrollPosition = window.pageYOffset || document.documentElement.scrollTop || 0;
+        document.body.style.position = 'fixed';
+        document.body.style.top = `-${scrollPosition}px`;
+        document.body.style.width = '100%';
     }
-});
+
+    function closeMenu() {
+        burger.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+        unlockBodyScroll();
+        window.scrollTo(0, scrollPosition);
+    }
+
+    function openMenu() {
+        lockBodyScroll();
+        burger.classList.add('is-open');
+        nav.classList.add('is-open');
+        document.body.classList.add('menu-open');
+    }
+
+    function forceMenuClosed() {
+        burger.classList.remove('is-open');
+        nav.classList.remove('is-open');
+        document.body.classList.remove('menu-open');
+        unlockBodyScroll();
+    }
+
+    // Prevent sticky no-scroll state on Android/Samsung after restores.
+    window.addEventListener('pageshow', forceMenuClosed);
+    document.addEventListener('visibilitychange', function () {
+        if (document.visibilityState === 'visible' && !nav.classList.contains('is-open')) {
+            unlockBodyScroll();
+        }
+    });
+
+    burger.addEventListener('click', function () {
+        if (!nav.classList.contains('is-open')) {
+            openMenu();
+        } else {
+            closeMenu();
+        }
+    });
+
+    // Close menu when clicking on the visible background wedge area
+    wedgeCloseArea.addEventListener('click', function () {
+        if (nav.classList.contains('is-open')) {
+            closeMenu();
+        }
+    });
+}
