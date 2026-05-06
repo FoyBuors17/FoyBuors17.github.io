@@ -58,7 +58,7 @@ const faqs = [
   {
     section: "billing",
     question: "Do you offer discounts for regular service?",
-    answer: "Yes! We offer discounts for clients who book weekly, bi-weekly, or monthly recurring services. The more frequently you book, the more you save."
+    answer: "Yes! We offer discounts for clients who book recurring Regular Cleans on a weekly, bi-weekly, or monthly basis. Recurring service is designed to maintain your home at a consistent standard each visit, with the same checklist completed every time.<br><br>Hourly Cleans are priced separately and do not receive recurring discounts, as they are a more flexible service where you choose your own cleaning priorities. Many clients love hourly cleans because extras such as ovens, fridges, or detailed areas can be included at no additional charge as long as they fit within the booked cleaning time."
   },
   {
     section: "billing",
