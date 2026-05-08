@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -29,7 +29,7 @@
                 <a href="about.html">About</a>
               </li>
               <li>
-                <a href="checklist.html">Checklist</a>
+                <a href="checklist.html">Checklists</a>
               </li>
               <li>
                 <a href="faqs.html">FAQs</a>
@@ -51,7 +51,7 @@
         </div>
         <ul class="nav-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="checklist.html" class="active">Checklist</a></li>
+          <li><a href="checklist.html" class="active">Checklists</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="giftcard.html">Gift Card</a></li>
           <li><a href="http://tidyfox.launch27.com/login">Log In</a></li>
@@ -100,209 +100,592 @@
       />
       <div class="checklist-content">
         <h2>Every Nook. Every Corner. <br />Nothing Unchecked.</h2>
-        <h1>Checklist</h1>
-        <h3>
-          Our cleaning checklist is designed to be as thorough as it gets! Every
-          nook, corner and cranny is checked to make sure that your home
-          receives a thorough and effective cleaning by your Tidy Fox Cleaning
-          team.
-        </h3>
-
-        <!-- Checklist Section -->
-        <div class="checklist-section">
-          <div class="checklist-section-container">
-            <!-- Kitchen Section -->
-            <div class="checklist-section-row">
-              <div class="checklist-section-image">
-                <img src="images/KitchenClean.avif" alt="Kitchen Cleaning" />
+        <div class="checklist-tabs" data-tabs>
+          <div class="checklist-tab-header">
+            <div class="checklist-tab-list-wrap">
+              <div
+                class="checklist-tab-list"
+                role="tablist"
+                aria-label="Checklist types"
+              >
+                <div
+                  class="checklist-tab-pair"
+                  data-checklist-pair="rental-hourly"
+                  role="presentation"
+                >
+                  <button
+                    type="button"
+                    class="checklist-tab-button"
+                    data-tab-target="rental-airbnb-clean"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Rental/Airbnb
+                  </button>
+                  <button
+                    type="button"
+                    class="checklist-tab-button"
+                    data-tab-target="hourly-clean"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Hourly Clean
+                  </button>
+                </div>
+                <div
+                  class="checklist-tab-pair"
+                  data-checklist-pair="regular-move"
+                  role="presentation"
+                >
+                  <button
+                    type="button"
+                    class="checklist-tab-button active"
+                    data-tab-target="regular-clean"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    Regular Clean
+                  </button>
+                  <button
+                    type="button"
+                    class="checklist-tab-button"
+                    data-tab-target="move-in-out-clean"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    Move In/Out Clean
+                  </button>
+                </div>
               </div>
-              <div class="checklist-section-column">
-                <h4>Kitchen</h4>
-                <ul class="checklist-section-list">
-                  <li>Polish exterior of all appliances</li>
-                  <li>Microwave inside and outside</li>
-                  <li>Rangehood (exterior)</li>
-                  <li>Countertop</li>
-                  <li>Backsplash (window and ledge)</li>
-                  <li>Polish faucet</li>
-                  <li>Polish sink</li>
-                  <li>Light clean of cabinets (exterior)</li>
-                  <li>Cabinet fixtures</li>
-                  <li>Tables/bar tops/chairs</li>
-                  <li>Dust all surfaces</li>
-                  <li>Sweep and wash floors</li>
-                  <li>Clean and put away dishes</li>
-                  <li>Empty trash</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Bathrooms Section -->
-            <div class="checklist-section-row checklist-section-row-reverse">
-              <div class="checklist-section-column">
-                <h4>Bathrooms</h4>
-                <ul class="checklist-section-list">
-                  <li>Vanity Countertops</li>
-                  <li>Vanity Doors</li>
-                  <li>Vanity fixtures</li>
-                  <li>Clean mirror(s)</li>
-                  <li>Polish sink(s)</li>
-                  <li>Polish faucet</li>
-                  <li>Clean tub/shower tiles</li>
-                  <li>Shower glass</li>
-                  <li>Disinfect toilets</li>
-                  <li>Sweep and wash floors</li>
-                  <li>Dust shelves</li>
-                  <li>Dust light fixture above mirror</li>
-                  <li>Empty trash</li>
-                </ul>
-              </div>
-              <div class="checklist-section-image">
-                <img src="images/BathroomClean.avif" alt="Bathroom Cleaning" />
-              </div>
-            </div>
-
-            <!-- Bedrooms Section -->
-            <div class="checklist-section-row">
-              <div class="checklist-section-image">
-                <img src="images/BedroomClean.avif" alt="Bedroom Cleaning" />
-              </div>
-              <div class="checklist-section-column">
-                <h4>Bedrooms</h4>
-                <ul class="checklist-section-list">
-                  <li>Make beds</li>
-                  <li>Dust exposed surfaces</li>
-                  <li>Dust and wipe lamps</li>
-                  <li>Dust picture frames</li>
-                  <li>Clean mirrors</li>
-                  <li>Vacuum/sweep and wash floors</li>
-                  <li>Basic organization (5 minutes)</li>
-                  <li>Empty trash</li>
-                </ul>
-              </div>
-            </div>
-
-            <!-- Common Areas Section -->
-            <div class="checklist-section-row checklist-section-row-reverse">
-              <div class="checklist-section-column">
-                <h4>All Other Common Areas</h4>
-                <ul class="checklist-section-list">
-                  <li>Couch and cushions vacuumed</li>
-                  <li>Arrange cushions</li>
-                  <li>Arrange throw blankets</li>
-                  <li>Dust all table tops and decor</li>
-                  <li>Vacuum/sweep and wash floors</li>
-                  <li>Basic organization (5 minutes)</li>
-                  <li>Washer and dryer exteriors</li>
-                  <li>Banister, handrails dusted</li>
-                  <li>Empty trash</li>
-                </ul>
-              </div>
-              <div class="checklist-section-image">
-                <img
-                  src="images/CommonRoomClean.avif"
-                  alt="Common Room Cleaning"
-                />
-              </div>
+              <div class="checklist-tab-rail" aria-hidden="true"></div>
             </div>
           </div>
-        </div>
 
-        <!-- Additional Services Section -->
-        <div class="additional-services">
-          <h4 class="additional-services-title">Additional Services</h4>
-          <div class="additional-services-container">
-            <div class="additional-services-grid">
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/fridge 3.png" alt="Inside fridge" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Inside fridge</h4>
+          <div class="checklist-tab-panels">
+            <section
+              id="regular-clean"
+              class="checklist-tab-panel active"
+              role="tabpanel"
+            >
+              <h1>Regular Clean</h1>
+              <h3>
+                Our cleaning checklist is designed to be as thorough as it gets!
+                Every nook, corner and cranny is checked to make sure that your
+                home receives a thorough and effective cleaning by your Tidy Fox
+                Cleaning team.
+              </h3>
+              <br /><br />
+
+              <!-- Checklist Section -->
+              <div class="checklist-section">
+                <div class="checklist-section-container">
+                  <!-- Kitchen Section -->
+                  <div class="checklist-section-row">
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/KitchenClean.avif"
+                        alt="Kitchen Cleaning"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>Kitchen</h4>
+                      <ul class="checklist-section-list">
+                        <li>Polish exterior of all appliances</li>
+                        <li>Microwave inside and outside</li>
+                        <li>Rangehood (exterior)</li>
+                        <li>Countertop</li>
+                        <li>Backsplash (window and ledge)</li>
+                        <li>Polish faucet</li>
+                        <li>Polish sink</li>
+                        <li>Light clean of cabinets (exterior)</li>
+                        <li>Cabinet fixtures</li>
+                        <li>Tables/bar tops/chairs</li>
+                        <li>Dust all surfaces</li>
+                        <li>Sweep and wash floors</li>
+                        <li>Clean and put away dishes</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Bathrooms Section -->
+                  <div
+                    class="checklist-section-row checklist-section-row-reverse"
+                  >
+                    <div class="checklist-section-column">
+                      <h4>Bathrooms</h4>
+                      <ul class="checklist-section-list">
+                        <li>Vanity Countertops</li>
+                        <li>Vanity Doors</li>
+                        <li>Vanity fixtures</li>
+                        <li>Clean mirror(s)</li>
+                        <li>Polish sink(s)</li>
+                        <li>Polish faucet</li>
+                        <li>Clean tub/shower tiles</li>
+                        <li>Shower glass</li>
+                        <li>Disinfect toilets</li>
+                        <li>Sweep and wash floors</li>
+                        <li>Dust shelves</li>
+                        <li>Dust light fixture above mirror</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/BathroomClean.avif"
+                        alt="Bathroom Cleaning"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Bedrooms Section -->
+                  <div class="checklist-section-row">
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/BedroomClean.avif"
+                        alt="Bedroom Cleaning"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>Bedrooms</h4>
+                      <ul class="checklist-section-list">
+                        <li>Make beds</li>
+                        <li>Dust exposed surfaces</li>
+                        <li>Dust and wipe lamps</li>
+                        <li>Dust picture frames</li>
+                        <li>Clean mirrors</li>
+                        <li>Vacuum/sweep and wash floors</li>
+                        <li>Basic organization (5 minutes)</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Common Areas Section -->
+                  <div
+                    class="checklist-section-row checklist-section-row-reverse"
+                  >
+                    <div class="checklist-section-column">
+                      <h4>All Other Common Areas</h4>
+                      <ul class="checklist-section-list">
+                        <li>Couch and cushions vacuumed</li>
+                        <li>Arrange cushions</li>
+                        <li>Arrange throw blankets</li>
+                        <li>Dust all table tops and decor</li>
+                        <li>Vacuum/sweep and wash floors</li>
+                        <li>Basic organization (5 minutes)</li>
+                        <li>Washer and dryer exteriors</li>
+                        <li>Banister, handrails dusted</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/CommonRoomClean.avif"
+                        alt="Common Room Cleaning"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/oven.png" alt="Inside oven" />
+              <!-- Additional Services Section -->
+              <div class="additional-services">
+                <h4 class="additional-services-title">
+                  Additional Services to add on to Regular Clean
+                </h4>
+                <div class="additional-services-container">
+                  <div class="additional-services-grid">
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/fridge 3.png" alt="Inside fridge" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside fridge</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/oven.png" alt="Inside oven" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside oven</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/DishWasher.png"
+                          alt="Inside dishwasher"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside dishwasher</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/WashingMachine.png"
+                          alt="Inside laundry machines"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside laundry machines</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/window.png" alt="Interior windows" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Interior windows</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/Blinds.png" alt="Wet wipe blinds" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Wet wipe blinds</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/walls.png" alt="Walls" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Walls (Spot Clean)</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/VentCover.png" alt="Vacuum vents" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Vacuum vents</h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                <div class="additional-service-text">
-                  <h4>Inside oven</h4>
+              </div>
+            </section>
+
+            <section
+              id="move-in-out-clean"
+              class="checklist-tab-panel"
+              role="tabpanel"
+              aria-hidden="true"
+            >
+              <h1>Move In/Out Clean</h1>
+              <h3>
+                Our Move In/Out Clean is a more detailed clean for empty homes
+                that need extra attention before moving in, selling, or
+                finishing a lease. It goes beyond our regular checklist by
+                focusing on built-up dust, inside appliances, cupboards, and the
+                areas that matter most before a move-out inspection.
+              </h3>
+              <br /><br />
+
+              <!-- Checklist Section -->
+              <div class="checklist-section">
+                <div class="checklist-section-container">
+                  <!-- Kitchen Section -->
+                  <div class="checklist-section-row">
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/Move out Kitchen.jpg"
+                        alt="Kitchen Cleaning"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>Kitchen</h4>
+                      <ul class="checklist-section-list">
+                        <li>Clean exterior and interior of all appliances</li>
+                        <li>Microwave inside and outside</li>
+                        <li>Rangehood</li>
+                        <li>Countertop cleaned and wiped down</li>
+                        <li>Backsplash cleaned and wiped down</li>
+                        <li>Polish faucet</li>
+                        <li>Polish sink</li>
+                        <li>Interior and exterior wipe down of all cabinets</li>
+                        <li>Cabinet fixtures cleaned and wiped down</li>
+                        <li>Dust all surfaces</li>
+                        <li>Sweep and wash floors</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Bathrooms Section -->
+                  <div
+                    class="checklist-section-row checklist-section-row-reverse"
+                  >
+                    <div class="checklist-section-column">
+                      <h4>Bathrooms</h4>
+                      <ul class="checklist-section-list">
+                        <li>Vanity Countertops</li>
+                        <li>Vanity Doors and inside cabinets</li>
+                        <li>Vanity fixtures</li>
+                        <li>Clean mirror(s)</li>
+                        <li>Polish sink(s)</li>
+                        <li>Polish faucet</li>
+                        <li>Clean tub/shower tiles</li>
+                        <li>Shower glass</li>
+                        <li>Disinfect toilets</li>
+                        <li>Sweep and wash floors</li>
+                        <li>Dust shelves</li>
+                        <li>Dust light fixture above mirror</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/Move out Bathroom.jpg"
+                        alt="Bathroom Cleaning"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- Bedrooms Section -->
+                  <div class="checklist-section-row">
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/Move out Bedroom.jpg"
+                        alt="Bedroom Cleaning"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>Bedrooms</h4>
+                      <ul class="checklist-section-list">
+                        <li>Dust exposed surfaces</li>
+                        <li>Clean mirrors</li>
+                        <li>Vacuum/sweep and wash floors</li>
+                        <li>Dust and clean closets and inside cabinets</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Common Areas Section -->
+                  <div
+                    class="checklist-section-row checklist-section-row-reverse"
+                  >
+                    <div class="checklist-section-column">
+                      <h4>All Other Common Areas</h4>
+                      <ul class="checklist-section-list">
+                        <li>Dust exposed surfaces</li>
+                        <li>Vacuum/sweep and wash floors</li>
+                        <li>Clean mirrors</li>
+                        <li>Clean and wipe down built in wall units</li>
+                        <li>Dust and clean closets and inside cabinets</li>
+
+                        <li>Banister, handrails dusted</li>
+                        <li>Washer and dryer cleaned and wiped down</li>
+                        <li>Empty trash</li>
+                      </ul>
+                    </div>
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/Move out Common Area.jpg"
+                        alt="Common Room Cleaning"
+                      />
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/DishWasher.png" alt="Inside dishwasher" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Inside dishwasher</h4>
+              <!-- Additional Services Section -->
+              <div
+                class="additional-services additional-services--move-outline"
+              >
+                <h4 class="additional-services-title">
+                  All of these extras are included in the Move In/Out Clean
+                </h4>
+                <div class="additional-services-container">
+                  <div class="additional-services-grid">
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/fridge 3.png" alt="Inside fridge" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside fridge</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/oven.png" alt="Inside oven" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside oven</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/DishWasher.png"
+                          alt="Inside dishwasher"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside dishwasher</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/WashingMachine.png"
+                          alt="Inside laundry machines"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Inside laundry machines</h4>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img
-                    src="images/WashingMachine.png"
-                    alt="Inside laundry machines"
-                  />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Inside laundry machines</h4>
-                </div>
-              </div>
+              <!-- Premium add-ons (accented vs included extras) -->
+              <div class="additional-services additional-services--premium">
+                <h4 class="additional-services-title">
+                  Premium extras you can add to your move in/out cleaning
+                </h4>
+                <div class="additional-services-container">
+                  <div class="additional-services-grid">
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Heavy Grease Reset.png"
+                          alt="Heavy Grease Reset"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Heavy Grease Kitchen Reset</h4>
+                        <p>
+                          For kitchens that have had years of grease build up.
+                        </p>
+                      </div>
+                    </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/window.png" alt="Interior windows" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Interior windows</h4>
-                </div>
-              </div>
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/window.png" alt="Premium extra 2" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Full Interior Window Package</h4>
+                        <p>Cleaning of glass, sills and tracks.</p>
+                      </div>
+                    </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/Blinds.png" alt="Wet wipe blinds" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Wet wipe blinds</h4>
-                </div>
-              </div>
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/Blinds.png" alt="Premium extra 3" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Full Blind Deep Clean</h4>
+                        <p>
+                          Cleaning of Horizontal Blinds(no aluminum blinds).
+                        </p>
+                      </div>
+                    </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/walls.png" alt="Walls" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Walls (Spot Clean)</h4>
-                </div>
-              </div>
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Full Wall Clean.png"
+                          alt="Premium extra 4"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Full Wall Wash</h4>
+                        <p>A Detailed Wash of all walls.</p>
+                      </div>
+                    </div>
 
-              <div class="additional-service-item">
-                <div class="additional-service-icon">
-                  <img src="images/VentCover.png" alt="Vacuum vents" />
-                </div>
-                <div class="additional-service-text">
-                  <h4>Vacuum vents</h4>
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Wall Spot Clean.png"
+                          alt="Premium extra 5"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Wall Spot Clean Upgrade</h4>
+                        <p>Spot Clean of Walls and high touch areas.</p>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/Baseboard (1).png" alt="Baseboard" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Baseboard and Trim Detail Package</h4>
+                        <p>A Detailed cleaning of baseboards and trim.</p>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Garage Sweep.png"
+                          alt="Premium extra 7"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Garage Sweep and Clean</h4>
+                        <p>A fresh sweep and clean of an empty garage.</p>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Post Construction.png"
+                          alt="Premium extra 8"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Post Construction Clean</h4>
+                        <p>A clean after a construction project.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
+            </section>
+
+            <section
+              id="rental-airbnb-clean"
+              class="checklist-tab-panel"
+              role="tabpanel"
+              aria-hidden="true"
+            >
+              <h1>Rental/Airbnb Clean</h1>
+              <h3>Details coming soon.</h3>
+            </section>
+
+            <section
+              id="hourly-clean"
+              class="checklist-tab-panel"
+              role="tabpanel"
+              aria-hidden="true"
+            >
+              <h1>Hourly Clean</h1>
+              <h3>Details coming soon.</h3>
+            </section>
           </div>
-        </div>
-
-        <!-- Move In Move Out Clean Section -->
-        <div class="move-in-out-section">
-          <h4 class="move-in-out-title">
-            All-Inclusive Move In/Out Cleaning Made Easy
-          </h4>
-          <ul class="move-in-out-list">
-            <li>
-              INCLUDES ALL THE EXTRAS <br />(windows and blinds calculated
-              separately)
-            </li>
-            <li>YES, ALSO INCLUDES INSIDE ALL CABINETS</li>
-          </ul>
         </div>
       </div>
     </div>
@@ -318,7 +701,7 @@
           <p class="footer-links">
             <a href="index.html" class="link-1">Home</a>
 
-            <a href="checklist.html">Checklist</a>
+            <a href="checklist.html">Checklists</a>
 
             <a href="giftcard.html">Gift Card</a>
 
@@ -375,5 +758,6 @@
       </div>
     </footer>
     <script src="js/hamburger-menu.js"></script>
+    <script src="js/checklist-tabs.js"></script>
   </body>
 </html>

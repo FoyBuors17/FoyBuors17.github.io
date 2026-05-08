@@ -956,40 +956,340 @@ nav {
   text-align: center;
 }
 
-/* Desktop Checklist Section Layout */
-@media (min-width: 769px) {
-  .checklist-section-row {
+.checklist-tabs {
+  --checklist-tab-active-orange: #ef8e30;
+  margin-top: 1.75rem;
+  max-width: 1400px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 0 0.5rem;
+  box-sizing: border-box;
+}
+
+/* Sticky tab row + full-width orange rail (same width as panel / “shadow box”) */
+.checklist-tab-header {
+  position: sticky;
+  top: 100px;
+  z-index: 900;
+  isolation: isolate;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  margin: 0;
+  padding: 0;
+  /* Content paints above full-bleed strip */
+  background: transparent;
+  box-sizing: border-box;
+}
+
+/*
+  Edge-to-edge white behind the tab strip so the scrolling panel’s box-shadow
+  doesn’t show through past the narrow content column (especially at the sides
+  and slightly above the tabs).
+*/
+.checklist-tab-header::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  margin-left: -50vw;
+  width: 100vw;
+  top: -36px;
+  bottom: 0;
+  background: #fff;
+  z-index: 0;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+.checklist-tab-list-wrap {
+  position: relative;
+  z-index: 1;
+  padding: 0 0 16px;
+  box-sizing: border-box;
+}
+
+.checklist-tab-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  margin: 0;
+  padding: 0;
+  isolation: isolate;
+  box-sizing: border-box;
+}
+
+/*
+  Full-width orange rail (folder bar): sits ON TOP of inactive tabs so they read
+  as “behind” the bar — same idea as the green reference. One solid orange.
+*/
+.checklist-tab-rail {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 16px;
+  margin: 0;
+  padding: 0;
+  background-color: var(--checklist-tab-active-orange);
+  border: none;
+  border-radius: 0;
+  z-index: 3;
+  pointer-events: none;
+  box-sizing: border-box;
+}
+
+/* Wide screens: pair wrappers are transparent; tabs sort visually via flex “order” */
+@media (min-width: 641px) {
+  .checklist-tab-pair {
+    display: contents;
+  }
+
+  .checklist-tab-button[data-tab-target="regular-clean"] {
+    order: 1;
+  }
+  .checklist-tab-button[data-tab-target="move-in-out-clean"] {
+    order: 2;
+  }
+  .checklist-tab-button[data-tab-target="rental-airbnb-clean"] {
+    order: 3;
+  }
+  .checklist-tab-button[data-tab-target="hourly-clean"] {
+    order: 4;
+  }
+}
+
+/*
+  Narrow screens: two pairs (Regular+Move / Rental+Hourly).
+  First pair in DOM = receded top row; second = prominent bottom row.
+  JS reorders pairs so the pair containing the active tab is always last.
+*/
+@media (max-width: 640px) {
+  .checklist-tab-list {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    /* No gap — front pair overlaps extended back-tab “necks” */
+    gap: 0;
+  }
+
+  /* Overlap back-tab necks — tuned so front row doesn’t cover back-row labels */
+  .checklist-tab-list > .checklist-tab-pair:last-child {
+    margin-top: -1.58rem;
+    position: relative;
+    z-index: 5;
+  }
+
+  .checklist-tab-pair {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: flex-end;
+    gap: 0.35rem;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .checklist-tab-pair .checklist-tab-button {
+    flex: 1;
+    min-width: 0;
+    text-align: center;
+  }
+
+  /* Back row: taller tabs, label pinned to top so it clears the front-row overlap */
+  .checklist-tab-list > .checklist-tab-pair:first-child .checklist-tab-button {
+    transform: translateY(0);
     display: flex;
     align-items: flex-start;
-    margin-bottom: 4rem;
+    justify-content: center;
+    box-sizing: border-box;
+    min-height: 4.1rem;
+    font-size: 0.72rem;
+    /* Top padding modest so text sits high; bottom padding extends folder “neck” behind front row */
+    padding: 0.32rem 0.25rem 1.55rem;
+    line-height: 1.15;
+    font-weight: 600;
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.75),
+      0 1px 4px rgba(0, 0, 0, 0.07);
+    opacity: 0.97;
+    z-index: 1;
+  }
+
+  /* Front row: both tabs large; only .active is orange */
+  .checklist-tab-list > .checklist-tab-pair:last-child .checklist-tab-button {
+    transform: translateY(0);
+    z-index: 6;
+    font-size: 0.95rem;
+    padding: 0.75rem 0.45rem 0.68rem;
+    line-height: 1.15;
+  }
+
+  .checklist-tab-list > .checklist-tab-pair:last-child .checklist-tab-button.active {
+    box-shadow: 6px 0 12px rgba(0, 0, 0, 0.08), -6px 0 12px rgba(0, 0, 0, 0.08);
+  }
+
+  .checklist-tab-button {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease,
+      font-size 0.3s ease, padding 0.3s ease;
+  }
+}
+
+@media (max-width: 640px) and (prefers-reduced-motion: reduce) {
+  .checklist-tab-button {
+    transition: none;
+  }
+}
+
+.checklist-tab-button {
+  position: relative;
+  z-index: 1;
+  border: 1.5px solid #cfcfcf;
+  border-bottom: none;
+  background: linear-gradient(180deg, #f6f6f6 0%, #ececec 58%, #e5e5e5 100%);
+  color: #555;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border-radius: 20px 20px 0 0;
+  padding: 0.88rem 1.55rem 0.82rem;
+  cursor: pointer;
+  /* Sit slightly lower so the rail covers the bottom edge — “behind” the bar */
+  transform: translateY(10px);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.85),
+    0 2px 6px rgba(0, 0, 0, 0.06);
+  transition: color 0.28s ease, background-color 0.28s ease, transform 0.28s ease,
+    box-shadow 0.28s ease, border-color 0.25s ease;
+}
+
+.checklist-tab-button::before {
+  content: none;
+}
+
+.checklist-tab-button:hover:not(.active) {
+  color: var(--tertiary-color);
+  border-color: var(--secondary-color);
+}
+
+.checklist-tab-button.active {
+  z-index: 5;
+  /* Solid fill same as border (override inactive gradient) */
+  background-color: var(--checklist-tab-active-orange);
+  background-image: none;
+  border: 1.5px solid var(--checklist-tab-active-orange);
+  border-bottom: none;
+  color: #fff;
+  transform: translateY(0);
+  /* Side depth only — no inset highlight that shifts the inner orange */
+  box-shadow: 6px 0 12px rgba(0, 0, 0, 0.08), -6px 0 12px rgba(0, 0, 0, 0.08);
+}
+
+.checklist-tab-button.active:hover,
+.checklist-tab-button.active:focus-visible {
+  background-color: var(--checklist-tab-active-orange);
+  background-image: none;
+  border-color: var(--checklist-tab-active-orange);
+  color: #fff;
+}
+
+.checklist-tab-panels {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  /* Flat top: rail sits above; outer corners match one card under the tabs */
+  border-radius: 0 0 18px 18px;
+  border: 1.5px solid rgba(0, 0, 0, 0.08);
+  border-top: none;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.14);
+  padding: 2rem 0.65rem 2.5rem;
+  min-height: 70vh;
+}
+
+.checklist-tab-panels::before {
+  content: none;
+}
+
+.checklist-tab-panel {
+  display: none;
+  animation: checklistFadeIn 0.32s ease;
+}
+
+.checklist-tab-panel.active {
+  display: block;
+}
+
+.checklist-tab-panel > h1 {
+  margin-top: 0.2rem;
+}
+
+@keyframes checklistFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Desktop Checklist Section Layout — grid keeps every row inside the shadow box */
+@media (min-width: 769px) {
+  .checklist-section-container {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  /* Image column wider ~60%, text ~40% — DOM order: [image][text] */
+  .checklist-section-row {
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: start;
     gap: 2rem;
-    padding: 0 2rem; /* Small padding to prevent touching edges */
-  }
-  
-  
-  .checklist-section-image {
-    flex: 0 0 80%; /* Fixed width for larger, more prominent images */
-    max-width: 80%;
-  }
-  
-  .checklist-section-image img {
+    margin-bottom: 4rem;
+    padding: 0 0.35rem;
     width: 100%;
-    height: 500px; /* Fixed height for consistency */
-    object-fit: cover; /* Crop images to fit consistently */
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+
+  /* DOM order: [text][image] — same visual ratio, swapped */
+  .checklist-section-row.checklist-section-row-reverse {
+    grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  }
+
+  .checklist-section-image {
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
+  }
+
+  .checklist-section-image img {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    height: 500px;
+    object-fit: cover;
     border-radius: 12px;
-    box-shadow: 0 4px 20px 0 rgba(0,0,0,0.15);
+    box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
   }
-  
+
   .checklist-section-column {
-    flex: 1;
-    max-width: 35%;
+    width: 100%;
+    min-width: 0;
+    max-width: 100%;
     text-align: left;
-    padding: 0 1rem;
+    padding: 0 0.35rem;
+    box-sizing: border-box;
   }
-  
+
   .checklist-section-column h4 {
     font-size: 2rem;
     margin-bottom: 1.5rem;
+  }
+
+  .checklist-section-list {
+    max-width: 100%;
   }
 }
 
@@ -2147,6 +2447,35 @@ nav {
     margin-bottom: 2rem;
   }
 
+  .checklist-tab-header {
+    top: 80px;
+  }
+
+  /* Stacked-folder overlap — match 640px (no gap between pairs) */
+  .checklist-tab-list {
+    gap: 0;
+  }
+
+  .checklist-tab-list-wrap {
+    padding: 0 0 12px;
+  }
+
+  .checklist-tab-button {
+    font-size: 0.9rem;
+    padding: 0.65rem 0.85rem 0.62rem;
+    border-radius: 14px 14px 0 0;
+  }
+
+  .checklist-tab-rail {
+    height: 12px;
+  }
+
+  .checklist-tab-panels {
+    border-radius: 0 0 14px 14px;
+    padding: 1.2rem 0.4rem 1.4rem;
+    min-height: 60vh;
+  }
+
   /* Mobile Footer */
   .footer-distributed {
     padding: 30px;
@@ -2323,7 +2652,7 @@ nav {
 
 .checklist-section {
   max-width: 1800px;
-  padding: 0rem 1rem 0rem 1rem;
+  padding: 0;
   text-align: center;
   background: #fff;
   margin: 0 auto;
@@ -2331,20 +2660,23 @@ nav {
 }
 
 .checklist-section-container {
-  max-width: 1200px;
+  max-width: 100%;
   margin: 0 auto;
 }
 
-.checklist-section-row {
-  display: flex;
-  gap: 3rem;
-  justify-content: center;
-  margin-bottom: 3rem;
-}
+/* Tablet / small desktop only — must not override min-width:769px grid layout */
+@media (max-width: 768px) {
+  .checklist-section-row {
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    margin-bottom: 3rem;
+  }
 
-.checklist-section-column {
-  flex: 0 0 auto;
-  text-align: left;
+  .checklist-section-column {
+    flex: 0 0 auto;
+    text-align: left;
+  }
 }
 
 .checklist-section-column h4 {
@@ -2404,6 +2736,32 @@ nav {
   border-radius: 20px;
 }
 
+/* Stacked blue sections (e.g. Move In/Out: included extras + premium add-ons) */
+.additional-services + .additional-services {
+  margin-top: 2rem;
+}
+
+/* Move In/Out — premium extras: stand out vs included extras (orange frames) */
+.additional-services--premium {
+  box-shadow: 0 0 0 3px var(--secondary-color), 0 12px 40px rgba(0, 0, 0, 0.14);
+}
+
+.additional-services--premium .additional-service-item {
+  border: 3px solid var(--secondary-color);
+  box-shadow: 0 4px 18px rgba(239, 142, 48, 0.22);
+}
+
+.additional-services--premium .additional-service-item:hover {
+  box-shadow: 0 10px 28px rgba(239, 142, 48, 0.32),
+    0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.additional-services--premium .additional-service-icon-placeholder {
+  border-color: rgba(239, 142, 48, 0.55);
+  border-style: dashed;
+  background: rgba(239, 142, 48, 0.06);
+}
+
 .additional-services-title {
   font-size: 2.5rem;
   font-weight: 700;
@@ -2459,6 +2817,18 @@ nav {
   object-fit: contain;
 }
 
+/* Placeholder icon area until real images are added */
+.additional-service-icon-placeholder {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto;
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.65);
+  border: 2px dashed rgba(255, 255, 255, 0.55);
+  border-radius: 10px;
+}
+
 .additional-service-text h4 {
   font-size: 1.3rem;
   font-weight: 600;
@@ -2504,6 +2874,11 @@ nav {
     margin-bottom: 0.5rem !important;
   }
 
+  .additional-service-icon-placeholder {
+    width: 50px !important;
+    height: 50px !important;
+  }
+
   .additional-service-text h4 {
     font-size: 1rem !important;
     margin-bottom: 0.25rem !important;
@@ -2514,6 +2889,22 @@ nav {
     font-size: 0.85rem !important;
     line-height: 1.2 !important;
   }
+}
+
+/* Move In/Out — included extras: blue border only (no solid cyan fill) */
+#move-in-out-clean .additional-services.additional-services--move-outline {
+  background: #fff !important;
+  border: 3px solid var(--primary-color) !important;
+  box-shadow: 0 6px 22px rgba(33, 188, 222, 0.12) !important;
+}
+
+#move-in-out-clean .additional-services.additional-services--move-outline .additional-services-title {
+  color: var(--tertiary-color) !important;
+}
+
+#move-in-out-clean .additional-services.additional-services--move-outline .additional-service-icon-placeholder {
+  background: rgba(33, 188, 222, 0.07) !important;
+  border: 2px dashed rgba(33, 188, 222, 0.45) !important;
 }
 
 /* Move In Move Out Section */
