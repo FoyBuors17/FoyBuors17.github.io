@@ -444,6 +444,7 @@ nav {
   overflow: hidden;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
+  text-align: center;
 }
 
 .service-card:hover {
@@ -451,17 +452,29 @@ nav {
   box-shadow: 0 8px 28px rgba(0, 0, 0, 0.18);
 }
 
-.service-card-image img {
-  display: block;
+/* Fixed image frame so all cards match (beats mobile img { height: auto }) */
+.service-card-image {
   width: 100%;
   height: 220px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: #f0f0f0;
+}
+
+.services-section .service-card-image img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .service-card-body {
   display: flex;
   flex-direction: column;
   flex: 1;
+  align-items: center;
   padding: 1.35rem 1.15rem 1.5rem;
   text-align: center;
 }
@@ -482,6 +495,8 @@ nav {
   font-size: 1rem;
   line-height: 1.55;
   color: #333;
+  text-align: center;
+  width: 100%;
 }
 
 .service-card-booking-btn {
@@ -531,8 +546,21 @@ nav {
     gap: 1.75rem;
   }
 
-  .service-card-image img {
+  .service-card-image {
     height: 200px;
+  }
+
+  .services-section .service-card-image img {
+    height: 100%;
+    width: 100%;
+    max-width: none;
+    object-fit: cover;
+  }
+
+  .services-section .service-card-body,
+  .services-section .service-card-body h3,
+  .services-section .service-card-body p {
+    text-align: center;
   }
 }
 
@@ -1847,6 +1875,26 @@ nav {
   canvas {
     max-width: 100%;
     height: auto;
+  }
+
+  /* Keep homepage service cards uniform on small phones */
+  .services-section .service-card-image {
+    height: 200px;
+  }
+
+  .services-section .service-card-image img {
+    width: 100%;
+    max-width: none;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .services-section .service-card,
+  .services-section .service-card-body,
+  .services-section .service-card-body h3,
+  .services-section .service-card-body p {
+    text-align: center;
   }
 
   p,
