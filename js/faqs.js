@@ -1,104 +1,54 @@
 const faqs = [
+  // General
   {
     section: "general",
     question: "Can I book online?",
-    answer: "Yes! Our convenient online booking system allows you to schedule your cleaning service 24/7, select your preferred date and time, and even specify special requests. You can also manage your recurring appointments online."
+    answer: "Absolutely! Our online booking system is available 24/7, allowing you to receive an instant quote, choose the cleaning service that's right for you, select your preferred date and time, and securely book your appointment in just a few minutes.<br><br>You can also customize your cleaning, add extras, set up recurring service, and manage your appointments online whenever it's convenient for you.<br><br>If you have questions or would rather speak with someone first, we're always happy to help by phone at <a href='tel:778-345-4369'>778-345-4369</a> or by email at <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a>."
   },
   {
     section: "general",
-    question: "What time will the cleaners arrive?",
-    answer: "If you book a start time of between 8:00 - 9:00 am the cleaners will arrive anytime between those hours. Please feel free to reach out to us directly should you encounter any problems with this - <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a>"
-  },
-      {
-      section: "services",
-      question: "What's included in your regular cleaning service?",
-      answer: "Our regular Cleaning Service is designed to be as thorough as it gets! Every corner, nook and cranny is checked to make sure that your home receives a thorough and effective cleaning by your Tidy Fox Cleaning Team. Have a look at our <a href='checklist.html'>CHECKLIST</a> tab to see all that is included in our Regular Cleans. There is so much included that it is impossible to add it to FAQs because it requires a whole webpage on its own."
-    },
-  {
-    section: "services",
-    question: "Why are Bedrooms not included in Regular Clean?",
-    answer: "It's been our experience that some people only want the main area of the house cleaned and that includes but not limited to the Kitchen, Dining room, Living room, Laundry room and main floor Bathroom. <br><br>So to accommodate everyone's needs we felt it was not right to charge everyone for minimum one bedroom for those who would like to keep their bedroom private and also for those who live in a studio apartment. <br><br>Our prices reflect this and the option is available to anyone who wants to have their bedrooms cleaned."
-  },
-  {
-    section: "services",
-    question: "What's included in your Move In/Move Out cleaning service?",
-    answer: "When booking a Move in or Move out clean, you can expect an all inclusive service. This is our most detailed package and it includes all our extras which can also be added to our Regular Clean package individually.<br><br>These extras include: <br><br>Inside Fridge<br>Inside Oven<br>Inside Dishwasher<br>Inside Laundry Machines<br>Interior Windows (cost per window added)<br>Wet Wipe Blinds (cost per blinds added)<br>Walls (spot clean)<br><br>This clean also includes inside cabinets and closets. This clean is intended to turn a once lived in home into it's original state and ready for a new homeowner to move into."
+    question: "Can I choose my appointment time?",
+    answer: "Yes! When booking online, you'll be able to choose from our available appointment times. Each appointment has a 1-hour arrival window, so if you book 8:00–9:00 AM, your cleaning team will arrive anytime between 8:00 AM and 9:00 AM.<br><br>Please note that this is your arrival window, not the length of your cleaning. The amount of time our team spends in your home will depend on the cleaning service you select and the size and needs of your home.<br><br>While we make every effort to arrive within your scheduled window, unexpected traffic or a previous appointment requiring additional attention may occasionally cause a slight delay. If we're running more than 30 minutes behind schedule, we'll contact you as soon as possible with an updated arrival time."
   },
   {
     section: "general",
     question: "Do you bring your own cleaning supplies?",
-    answer: "Yes, we bring all necessary cleaning supplies and equipment.  Each of our cleaners is outfitted with over $500 of professional grade tools and cleaning products. We use eco-friendly, non-toxic products that are safe for your family and pets. If, however, you have special cleaning supplies that you would like us to use please let us know in the booking comments or you can let your Home Cleaning Specialist know when they show up to your home."
+    answer: "Yes! Our cleaning teams arrive fully equipped with professional-grade cleaning products, equipment, and microfiber cloths, so you don't have to provide a thing.<br><br>Our everyday cleaning products include environmentally responsible probiotic cleaners that are safe for your family, pets, and the environment while providing excellent cleaning results. When a home requires extra attention, we also have professional-strength specialty products available to safely tackle tougher grease, soap scum, hard water deposits, and other stubborn buildup.<br><br>If you have a specific product you'd like us to use due to allergies, sensitivities, or personal preference, we're happy to accommodate whenever possible. Simply let us know during the booking process or when our team arrives."
   },
- 
-  {
+  /*{
     section: "general",
     question: "Do we need to have everything out of the house for a Move In/Move Out clean?",
     answer: "The short answer is Yes. We will clean everything in the house but we will need to have access to the house to do so. We will not be able to clean the inside of the fridge, oven, dishwasher, laundry machines, windows, blinds, walls, or inside cabinets and closets if the house is not empty.<br><br>If you are not able to have everything out of the house, we can work around it as long as certain parts of the house are empty and ready to be cleaned. We would need the house to be emptied as we are cleaning so that when we are done one area we can move on to the next."
+  },*/
+  {
+    section: "general",
+    question: "Do you use Environmentally Safe CleaningProducts?",
+    answer: "Yes! Our everyday cleaning products include environmentally responsible probiotic cleaners that are safe for your family, pets, and the environment. These innovative products continue working for days after your cleaning by using beneficial bacteria to naturally break down dirt and organic matter, helping keep surfaces cleaner for longer.<br><br>We primarily use Biom Probiotic Cleaning Products by Choice Probiotics, imported from Belgium, as our all-purpose cleaning solution. They provide an effective alternative to harsh chemicals while delivering excellent everyday cleaning results.<br><br>For tougher jobs, such as heavy grease, stubborn soap scum, or hard water buildup, our cleaning teams also carry professional-strength specialty products to safely restore surfaces when needed. We always strive to use the gentlest product that will achieve the best results."
   },
   {
     section: "general",
-    question: "Do you use Environmentally Safe Products?",
-    answer: "Yes! We use Biom Probiotic cleaning products by Choice Probiotics imported from Belgium. Probiotics provide a healthy and effective alternative to harsh chemical cleaning products. Probiotic products give the power of millions of good bacteria which are stabilized, living, good bacteria. These tiny super heroes go to work on surfaces as soon as they are applied, and continue working for 5 days. It's safer for the environment, our children, our pets and ourselves. "
-  },
-{
-    section: "services",
-    question: "Can you clean while I'm not home?",
-    answer: "Absolutely! Many of our clients provide us with access to their homes so we can clean while they're at work or away. It will put a smile on your face and relieve a days worth of stressors when you walk into your freshly cleaned home at the end of a busy day."
-  },
-  {
-    section: "billing",
-    question: "How do you determine pricing?",
-    answer: "Our pricing is based on the type of cleaning service requested, the frequency of service along with other option that you can choose such as the number of bedrooms, bathrooms, and the size of the house. We offer competitive rates with discounts for regular recurring services. <br><br>We have a <a href='booking.html'>BOOK NOW</a> page that you can input your information and it will give you an instant quote. You can also pick a date and time for you cleaning from our live up to date calendar. <br><br>If you would rather speak to someone directly please call us at <a href='tel:778-345-4369'>778-345-4369</a> or email us at <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a>"
-  },
-  {
-    section: "billing",
-    question: "What payment methods do you accept?",
-    answer: "We accept all major credit cards, cash and e-transfer.<br><br>We do require a credit card on file as we do a pre-authorization the day before the cleaning to ensure payment is in place. The credit card payment is not processed until the cleaning is completed. If you would prefer to pay with cash or e-transfer please let us know and we will just release the hold on the card once payment is received. <br><br>Most of our clients prefer to pay with credit card as you can set it up and forget about it."
-  },
-  {
-    section: "billing",
-    question: "Do you offer discounts for regular service?",
-    answer: "Yes! We offer discounts for clients who book recurring Regular Cleans on a weekly, bi-weekly, or monthly basis. Recurring service is designed to maintain your home at a consistent standard each visit, with the same checklist completed every time.<br><br>Hourly Cleans are priced separately and do not receive recurring discounts, as they are a more flexible service where you choose your own cleaning priorities. Many clients love hourly cleans because extras such as ovens, fridges, or detailed areas can be included at no additional charge as long as they fit within the booked cleaning time."
-  },
-  {
-    section: "billing",
-    question: "What if I need to cancel or reschedule?",
-    answer: "We understand that plans change. Please give us at least 24 hours notice to cancel or reschedule your appointment. You can easily reschedule through our online booking system or by calling our office."
-  },
-  {
-    section: "general",
-    question: "How far in advance do I need to book?",
-    answer: "Our booking site allows you to book a cleaning with as little as 24 hours notice. If you need to book a cleaning with less than 24 hours notice please call us at <a href='tel:778-345-4369'>778-345-4369</a> or email us at <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a> and we can work with you to find a time that works for you."
-  },
-  {
-    section: "services",
-    question: "How long will the cleaning take?",
-    answer: "Our cleaning time is based on a formula that we have developed over the years. With a regular clean we have an estimated time but we will work until the job is done. With an hourly clean we will work for the time that you have booked."
-  },
-  {
-    section: "services",
-    question: "How can I get the most value out of my hourly house cleaning appointment?",
-    answer: "Many people think that they have to have their entire home detailed when hiring a house cleaning company. This can leave you feeling a little overwhelmed by the cost. The truth is that you don't have to get everything done. Most people dread certain specific cleaning tasks, or they have areas in their home that bug them more than others. You can request to get just those things or areas done. It will make the cost much more reasonable, and you will still greatly benefit from having the service!<br><br>We offer a service that is built specifically for this! Our hourly Clean allows you to set a time that is within your budget. You then provide us with your checklist of cleaning duties you would like us to work down from. We highly suggest putting the tasks you hate doing most at the top of your list to ensure completion, so you won't get stuck doing them on your own later! We start at the top of your checklist, working our way down until your budgeted time is up. It's simple and straightforward. You can change your checklist as often as you like, and if you feel like you want more or less done in your home, you can update your budget too!<br><br><br>Other ways you can ensure you are getting value:<br><br>- Change your checklist prior to each appointment alternating rooms/areas that have not been cleaned in some time.<br><br>- Always start with a low budget, and work your way up. Most people are quite happy with just a little extra help.<br><br>-  Our hourly cleans start at 2 hours of cleaning time, this is reflected on the booking site as 2 cleaners for 1 hour."
+    question: "How far in advance should i book?",
+    answer: "We recommend booking as early as possible to secure your preferred date and time, especially for recurring cleanings, move-in/move-out cleans, and busy times of the year.<br><br>That said, our online booking system displays our live availability, so you can often book a cleaning with as little as 24 hours' notice. If you're looking for a last-minute appointment, check our online calendar or give us a call—we'll always do our best to fit you in whenever possible.<br><br>If you don't see a time that works for you, please contact us at <a href='tel:778-345-4369'>778-345-4369</a> or <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a>. We may be able to accommodate your request or add you to our cancellation list."
   },
   {
     section: "general",
     question: "Are you pet friendly?",
-    answer: "Yes we are pet friendly. All our cleaners are comfortable with your furry friends and will not hesitate to give them a little love while they are cleaning. All cleaning products are pet safe and we will not use any products that are not safe for your pets."
+    answer: "Yes! We love pets and understand they're an important part of the family. Our cleaning teams are comfortable working around friendly dogs, cats, and other household pets, and we're always happy to give them a little attention while we're in your home.<br><br>We use pet-safe everyday cleaning products and take care to ensure your home is cleaned safely and responsibly. If your pet has any special needs, is nervous around new people, or there are any instructions you'd like us to follow, simply let us know before your appointment and we'll be happy to accommodate whenever possible."
   },
   {
     section: "general",
     question: "Do I have to sign a contract?",
-    answer: "We want our clients to want to use us. You are never required to sign a contract.  We are confident that you will want to use us again and again.<br><br>You can cancel anytime prior to your scheduled appointment without penalty. We would rather reschedule your appointment then have you upset because you were charged for a service you did not receive."
+    answer: "No. We believe our clients should stay with us because they love our service—not because they're locked into a contract.<br><br>Whether you book a one-time cleaning or recurring service, you're free to cancel or make changes at any time. We simply ask for at least 24 hours' notice if you need to cancel or reschedule an appointment.<br><br>Our goal is to earn your trust with every visit, and we're confident that once you experience the Tidy Fox difference, you'll want us back again."
   },
   {
     section: "general",
     question: "I'm nervous/embarassed. I don't want someone to see my home.",
-    answer: "If you're feeling this way, please try not to worry! Our cleaners are absolute professionals. This is what we love to do and what we excel at. We see it all, and there is no judgment. Our hope is that those feelings will dissipate as soon as your appointment starts and you see your home transform."
+    answer: "Absolutely—and you're not alone. Many first-time clients tell us they feel embarrassed or worried about having someone see their home. Please don't be. Our team is here to help, not to judge.<br><br>As professional cleaners, we've seen homes in every condition imaginable. Whether you've been busy with work, raising a family, dealing with health challenges, or simply haven't had the time to keep up, our only goal is to make your life a little easier.<br><br>We take pride in creating a comfortable, judgment-free experience from the moment we arrive. Most clients tell us that any nervousness disappears within the first few minutes, and they wish they had called us sooner."
   },
   {
     section: "general",
     question: "How many cleaners will come?",
-    answer: "We typically send 2 cleaners to your home. If you have a large home or a lot of cleaning to do we may send more. <br><br>For example: If you booked a 3 hour clean and 2 cleaner came to the appointment(6 cleaning hours), they would be there for the full 3 hours. If 3 cleaners came to the appointment, they would be there for 2 hours each, for a total of 6 hours. Please note that for larger cleans, we may send more cleaners to ensure all the work can get done in a single day."
+    answer: "We typically send a team of <strong>2 professional cleaners</strong> to every appointment. Working as a team allows us to complete your cleaning more efficiently while maintaining the high-quality standards Tidy Fox is known for.<br><br>For larger homes, Move-In/Move-Out Cleans, or larger Premium Custom Cleans, we may send additional team members to complete the work in a single visit. More cleaners doesn't mean you're paying more—it simply allows us to complete the same amount of work in less time.<br><br>For example, if you book 2 cleaners for 3 hours (6 labour hours), we may occasionally send 3 cleaners for 2 hours instead. The total amount of cleaning time remains the same, but your home is finished sooner so you can get back to enjoying your day."
   },
   {
     section: "general",
@@ -108,12 +58,158 @@ const faqs = [
   {
     section: "general",
     question: "Is there anything the cleaners won't do?",
-    answer: "<strong>Weight</strong> - We have a 20 lb. weight limit for safety reasons. We are accustomed to moving smaller items like dining table chairs, small ottomons, etc. to clean under. If you would like any heavier furniture or appliances cleaned under, you're welcome to move it and we'll be happy to clean under it upon request.<br><br><strong>Heights</strong> - We are limited to a 2 foot or shorter step stool. Safety is of the utmost importance to us. Please keep in mind that in most cases, the tops of kitchen cupboards are outside of our reach. Some lighting fixtures are also out of our reach.<br><br><strong>Outdoor Areas</strong> - Due to insurance purposes, we are not able to clean outdoor areas such as decks, patios, or gardens. Our insurance only covers the inside of the home.<br><br><strong>Pet Messes/Body Fluids</strong> - This includes, but is not limited to: litter boxes, pet messes, bird guano, blood, feces, urine, and overflowed toilets. Cleaning body fluids (including that of our furry friends) is something we do not do.<br><br><strong>Mold</strong> - Some amount of pink/orange mildew, or even darker mold, is common in some homes. Don't worry - we can clean small amounts of mold. Large amounts of mold in shower areas, on walls, etc. can affect air quality and pose a safety issue. We aren't able to clean in rooms that are heavily affected by mold, or in homes with heavy mold infestations.<br><br><strong>Carpet Cleaning</strong> - We do not offer carpet shampooing service."
+    answer: "For the safety of our team and the protection of your home, there are a few things we aren't able to do.<br><br><strong>Heavy Lifting</strong> - For safety reasons, we do not move furniture or appliances weighing more than approximately 20 lbs. If you would like these areas cleaned, we're happy to do so if the items have been moved before we arrive.<br><br><strong>Working at Heights</strong> - Our cleaners use step stools only. We are unable to clean areas that require larger ladders, including high exterior windows, vaulted ceilings, or hard-to-reach light fixtures.<br><br><strong>Outdoor Areas</strong> - Our services are limited to the interior of your home. We do not clean patios, decks, exterior windows, garages (unless booked as an add-on), or outdoor living spaces.<br><br><strong>Biohazards & Pet Waste</strong> - For health and safety reasons, we do not clean blood, bodily fluids, pet accidents, litter boxes, or other biohazardous materials.<br><br><strong>Heavy Mold</strong> - We can clean small amounts of common bathroom mildew, but we are unable to clean areas with significant mold growth due to potential health risks.<br><br><strong>Carpet & Upholstery Cleaning</strong> - We do not provide carpet shampooing, steam cleaning, or upholstery cleaning services."
   },
   {
-    section: "office requests",
-    question: "Do you clean commercial offices?",
-    answer: "Yes, we do clean commercial offices. We have a special pricing for commercial offices and we are able to clean them on a weekly, bi-weekly, or monthly basis. Please contact us at <a href='mailto:tidyfox@hotmail.com'>tidyfox@hotmail.com</a> or call us at <a href='tel:778-345-4369'>778-345-4369</a> to discuss your commercial cleaning needs."
+    section: "general",
+    question: "Why choose Tidy Fox Cleaning Service?",
+    answer: "At Tidy Fox Cleaning Services, we believe that hiring a cleaning company should be simple, reliable, and stress-free. From instant online quotes and easy booking to our professionally trained cleaning teams, everything we do is designed to make your life easier.<br><br>We specialize in residential cleaning and offer services tailored to your needs, including Premium Custom Cleans, Regular Cleans, Move-In/Move-Out Cleans, and Airbnb & Rental Turnovers. Whether you're looking for complete flexibility or a consistent maintenance plan, we have a service that's right for you.<br><br>With a 5-star Google rating, over 90 Google reviews, and the trust of more than 420 homeowners throughout Abbotsford, Mission, Chilliwack, Langley, and Aldergrove, we're proud to have built our reputation on quality, reliability, and exceptional customer service.<br><br>Our mission is simple: <strong>We create time for you to enjoy life.</strong>"
+  },
+  {
+    section: "general",
+    question: "Do I need to be home during the cleaning?",
+    answer: "No! Many of our clients prefer to have their home cleaned while they're at work, running errands, or simply enjoying their day.<br><br>We're happy to work with whatever access method is most convenient for you, whether that's a key, door code, lockbox, concierge, or another arrangement. Your home will always be secured when we leave, and we'll follow any instructions you provide.<br><br>Our professional cleaning teams are fully insured, carefully selected, and treat every home with the same care and respect they would their own. Many of our clients love coming home to a freshly cleaned house without having to interrupt their day."
+  },
+  {
+    section: "general",
+    question: "Do I need to tidy up before the cleaners arrive?",
+    answer: "Not at all! We understand that life gets busy, and we're here to make it easier—not create more work for you.<br><br>For our <strong>Regular Clean</strong>, we simply ask that everyday clutter be picked up where possible so our cleaning team can focus on the detailed cleaning included in your checklist. We allow a few minutes in each main area for light tidying, but excessive clutter may reduce the amount of time available for cleaning.<br><br>If your home needs more organizing or you'd like help with everyday tasks such as washing dishes, folding laundry, tidying rooms, or other household chores, our <strong>Premium Custom Clean</strong> is the perfect option. Since you choose the priorities for each visit, our team can spend as much or as little time on these tasks as you'd like within your booked cleaning time."
+  },
+  {
+    section: "general",
+    question: "How do I prepare for my first cleaning?",
+    answer: "Preparing for your first cleaning is easy! There's no need to deep clean before we arrive—that's what we're here for. Simply ensure our team has access to your home and any areas you'd like cleaned.<br><br>If you have any special instructions or priorities, please let us know during the booking process or when our cleaning team arrives. We're always happy to tailor your cleaning to your needs whenever possible.<br><br>If you've booked a <strong>Regular Clean</strong>, we recommend picking up any excessive clutter so our team can focus on the detailed cleaning included in your checklist. If you'd like help with organizing, dishes, laundry, or other everyday household tasks, our <strong>Premium Custom Clean</strong> is the perfect choice, allowing you to decide how your cleaning time is spent."
+  },
+  {
+    section: "general",
+    question: "Do you guarantee your work?",
+    answer: "Yes! We stand behind the quality of every cleaning we provide. If you feel we've missed something that's included in your booked service, simply let us know within <strong>24 hours</strong>, and we'll gladly return to make it right at no additional charge.<br><br>Our goal is to exceed your expectations on every visit. We value your feedback and use it to continually improve our service, ensuring every client receives the high-quality cleaning experience Tidy Fox is known for."
+  },
+
+  // Services
+  {
+    section: "services",
+    question: "Which cleaning service is right for me?",
+    answer: "Choosing the right cleaning service is easy! At Tidy Fox Cleaning Services, we've designed each service to fit different needs and lifestyles.<br><br><strong>Premium Custom Clean</strong> is perfect if you want complete flexibility. You choose the amount of cleaning time, and our team focuses on your priorities. Whether it's inside the fridge, folding laundry, washing dishes, or giving extra attention to specific areas, your cleaning is completely customized to you.<br><br><strong>Regular Clean</strong> is ideal for homeowners who want a consistent checklist completed every visit. It's our best value for ongoing home maintenance and includes discounted pricing for weekly, bi-weekly, and monthly recurring service.<br><br><strong>Move-In/Move-Out Clean</strong> is designed for homes that need a detailed top-to-bottom cleaning before moving in or after moving out, with additional premium add-ons available for homes that need extra attention.<br><br><strong>Airbnb & Rental Turnover Clean</strong> is tailored for short-term rental properties, helping ensure your home is guest-ready between every stay with optional laundry, restocking, and deep reset services.<br><br>If you're still unsure which service is best for your home, we're always happy to help. Give us a call at <a href='tel:778-345-4369'>778-345-4369</a>, and we'll help you choose the option that's right for you."
+  },
+  {
+    section: "services",
+    question: "What is the difference between Premium Custom Cleaning and Regular Cleaning?",
+    answer: "Both services provide the same professional cleaning quality—they're simply designed for different needs.<br><br><strong>Premium Custom Clean</strong> gives you complete flexibility. You choose how much cleaning time you'd like, and our team focuses on your priorities. Every visit can be different, and everyday tasks such as dishes, laundry, organizing, or detailed cleaning like the inside of the fridge or oven can all be included within your booked time.<br><br><strong>Regular Clean</strong> follows a consistent cleaning checklist every visit, making it the perfect choice for maintaining a clean home. Because the service is standardized, we can offer discounted pricing for weekly, bi-weekly, and monthly recurring cleanings. Additional services, such as inside the fridge, oven, windows, or blinds, are available as optional add-ons.<br><br>If you want complete flexibility and control over each visit, choose our <strong>Premium Custom Clean</strong>. If you prefer a consistent maintenance cleaning with recurring discounts, our <strong>Regular Clean</strong> is the perfect fit."
+  },
+  {
+    section: "services",
+    question: "Why do so many clients choose the Premium Custom Clean?",
+    answer: "Many homeowners love the <strong>Premium Custom Clean</strong> because it gives them complete control over every visit. Instead of following a fixed checklist, our cleaning team focuses on the tasks that matter most to you.<br><br>Need extra time in the kitchen one visit? Want the inside of the fridge cleaned before guests arrive? Need help with dishes, laundry, or organizing? Your priorities can change from visit to visit, and we'll tailor the cleaning to fit your needs.<br><br>It's the perfect choice for busy families, homeowners with changing priorities, or anyone who wants a truly personalized cleaning experience without worrying about separate charges for common household tasks."
+  },
+  {
+    section: "services",
+    question: "Can I change my priorities every visit with Premium Custom Cleaning?",
+    answer: "Absolutely! That's one of the biggest advantages of our <strong>Premium Custom Clean</strong>. Every visit can be completely different based on your needs and priorities.<br><br>One week you may want us to focus on bathrooms and floors, while the next you may prefer extra attention on the kitchen, inside the fridge, laundry, or other household tasks. Simply let us know what's most important to you, and our cleaning team will make the most of your booked cleaning time.<br><br>Your home, your priorities, your schedule—it's cleaning designed around you."
+  },
+  {
+    section: "services",
+    question: "Can I include things like the fridge or oven in my Premium Custom Clean?",
+    answer: "Yes! One of the biggest advantages of our <strong>Premium Custom Clean</strong> is that there are no separate add-on charges for common household tasks. If you'd like the inside of the fridge, oven, microwave, interior windows, laundry, dishes, or other everyday tasks completed, simply include them in your priority list.<br><br>Our cleaning team will focus on the tasks that are most important to you and make the best use of your booked cleaning time. The more time you book, the more we'll be able to accomplish.<br><br>It's all about flexibility—you decide what's important, and we'll tailor every visit to fit your needs."
+  },
+  {
+    section: "services",
+    question: "What's included in a Regular Clean?",
+    answer: "Our <strong>Regular Clean</strong> is designed to keep your home consistently clean and well maintained by following the same professional checklist during every visit. Typical tasks include dusting, vacuuming, mopping, kitchen cleaning, bathroom cleaning, bed making, and general cleaning throughout your home.<br><br>When booking, you'll simply tell us the number of bedrooms, bathrooms, kitchens, and the size of your home. This allows us to provide an instant online quote while ensuring enough time is scheduled to properly clean your home.<br><br>Additional services, such as the inside of the fridge, oven, windows, blinds, and other detailed tasks, are available as optional add-ons. For a complete breakdown of everything included, please visit our <strong>Services</strong> page to view the full Regular Clean Checklist."
+  },
+  {
+    section: "services",
+    question: "Why aren't bedrooms included in the base price?",
+    answer: "Our base Regular Clean includes the common living areas of your home, one bathroom, one kitchen, and homes up to 1,500 square feet. Bedrooms are priced separately because every additional bedroom increases the amount of time required to clean your home.<br><br>Whether a bedroom is used as a primary bedroom, guest room, nursery, or home office, it still requires dusting, vacuuming, bed making (if applicable), and other detailed cleaning. Pricing by the number of bedrooms allows us to provide a fair and accurate quote based on the size and cleaning needs of your home.<br><br>If there are rooms you don't need cleaned, simply leave them out of your booking. You're only paying for the areas you'd like professionally cleaned."
+  },
+  {
+    section: "services",
+    question: "Can I add extras to my Regular Clean?",
+    answer: "Absolutely! Our <strong>Regular Clean</strong> can be customized with a variety of optional add-ons to suit your home's needs. Popular extras include cleaning the inside of the fridge, oven, dishwasher, laundry machines, interior windows, blinds, wall spot cleaning, and more.<br><br>Simply select the extras you'd like during the online booking process, and we'll include them in your quote and schedule enough time to complete them properly.<br><br>If you find yourself wanting different extras each visit, or you'd prefer not to pay separately for individual add-ons, our <strong>Premium Custom Clean</strong> may be the better choice. It allows you to change your priorities every visit, with common household tasks included within your booked cleaning time."
+  },
+  {
+    section: "services",
+    question: "What's included in a Move-In/Move-Out Clean?",
+    answer: "Our <strong>Move-In/Move-Out Clean</strong> is a comprehensive top-to-bottom cleaning designed to prepare a home for new occupants or leave it looking its best after you've moved out.<br><br>In addition to everything included in our <strong>Regular Clean</strong>, every Move-In/Move-Out Clean also includes cleaning the inside of the refrigerator, oven, dishwasher, and laundry machines as part of the standard service.<br><br>For homes that require additional attention, we also offer premium add-ons such as heavy grease kitchen restoration, full interior windows, blind cleaning, wall washing, baseboard and trim detailing, garage sweep and clean, and post-renovation cleaning.<br><br>For a complete breakdown of everything that's included, please visit our <strong>Services</strong> page to view the full Move-In/Move-Out Cleaning Checklist."
+  },
+  {
+    section: "services",
+    question: "Do I need to empty the home before a Move-Out Clean?",
+    answer: "Yes. For the best possible results, we recommend that the home be completely empty before your Move-In/Move-Out Clean begins. This allows our cleaning team full access to floors, baseboards, closets, cabinets, and other areas that would otherwise be blocked by furniture or personal belongings.<br><br>If a few items remain in the home, we'll certainly clean around them whenever possible. However, we cannot guarantee the same level of detail in areas that are inaccessible.<br><br>If you're unsure whether your home is ready for cleaning, please contact us before your appointment. We're always happy to answer your questions and help you schedule your cleaning at the right time."
+  },
+  {
+    section: "services",
+    question: "What premium add-ons are available for Move-Out Cleans?",
+    answer: "Our <strong>Move-In/Move-Out Clean</strong> is already a comprehensive top-to-bottom cleaning, but some homes require additional restoration or detailing beyond our standard service.<br><br>Optional premium services include <strong>Heavy Grease Kitchen Restoration, Full Interior Window Package, Full Blind Deep Clean, Full Wall Wash, Baseboard & Trim Detail Package, Garage Sweep & Clean,</strong> and <strong>Post Renovation Clean</strong>.<br><br>These services are designed for homes that need extra attention and can be added during the online booking process to customize your cleaning based on the condition of your home."
+  },
+  {
+    section: "services",
+    question: "Do you clean Airbnb and vacation rental properties?",
+    answer: "Yes! We specialize in cleaning Airbnb, vacation rental, and short-term rental properties. Our <strong>Airbnb Turnover Clean</strong> is designed to get your property guest-ready between stays, helping you maintain the high standards your guests expect.<br><br>Each turnover includes cleaning and resetting the home, with optional services such as laundry, restocking of paper products, and deep reset cleaning available when needed. Whether you manage one property or multiple rentals, we'll help ensure your guests arrive to a clean, welcoming space every time."
+  },
+  {
+    section: "services",
+    question: "Can you handle guest turnovers and same-day cleans?",
+    answer: "Yes! We understand that timing is critical for short-term rental properties. Whenever possible, we'll work with your guest check-out and check-in schedule to have your property cleaned, reset, and ready for your next guests.<br><br>While same-day turnovers are often possible, they are subject to our scheduling availability. We recommend booking recurring turnovers whenever possible to help ensure your preferred dates and times are reserved.<br><br>If you have a last-minute booking or an unexpected scheduling change, give us a call. We'll always do our best to accommodate your request."
+  },
+  {
+    section: "services",
+    question: "Do you offer laundry and restocking?",
+    answer: "Yes! Every <strong>Airbnb & Rental Turnover</strong> includes restocking of owner-supplied guest amenities at no additional charge. This includes items such as toilet paper, paper towels, soap, coffee supplies, and other essentials that you provide.<br><br>We also offer an optional <strong>Wash & Dry Linens</strong> service for hosts who would like us to wash, dry, and prepare linens and towels between guest stays. This service can be added during the online booking process whenever it's needed."
+  },
+  {
+    section: "services",
+    question: "Can I customize my Airbnb turnover checklist?",
+    answer: "Yes! Our <strong>Airbnb & Rental Turnover</strong> follows a guest-ready checklist designed for short-term rentals, but we can customize the turnover based on your property’s specific needs.<br><br>If you have special instructions, preferred staging details, supply locations, linen instructions, or specific areas you’d like checked each visit, simply let us know and we’ll do our best to follow your process.<br><br>For larger changes or extra tasks beyond the standard turnover, optional services such as <strong>Wash & Dry Linens</strong>, <strong>Interior Window Package</strong>, and <strong>Deep Reset</strong> can be added when needed."
+  },
+  {
+    section: "services",
+    question: "How long will the cleaning take?",
+    answer: "The length of your cleaning depends on the size of your home, the service you've selected, and any optional services you've added. During the online booking process, we'll calculate the appropriate amount of time needed based on the details you provide.<br><br>Most appointments are completed by a team of two professional cleaners, allowing us to clean your home efficiently while maintaining the high standards Tidy Fox is known for.<br><br>We'll always schedule enough time to complete the services you've booked, so you can relax knowing your home is receiving the attention it deserves."
+  },
+
+  // Billing
+  {
+    section: "billing",
+    question: "How do you determine pricing?",
+    answer: "Our pricing is based on the cleaning service you choose and the details of your home. Depending on the service, we'll ask for information such as the number of bedrooms, bathrooms, kitchens, square footage, or the amount of cleaning time you'd like to book.<br><br>This allows us to instantly calculate a fair and accurate price while ensuring we schedule enough time for our professional cleaning team to complete the job properly.<br><br>There are no hidden fees or surprise charges. Any optional services or add-ons are clearly displayed during the online booking process, so you'll always know exactly what to expect before confirming your appointment."
+  },
+  {
+    section: "billing",
+    question: "What payment methods do you accept?",
+    answer: "We accept all major credit cards, cash, and e-transfer.<br><br>To make payment quick and hassle-free, we require a credit card on file for all bookings. The day before your cleaning, our system places a temporary pre-authorization hold to verify the payment method. Your card is <strong>not charged</strong> until your cleaning has been completed.<br><br>If you prefer to pay by cash or e-transfer, simply let us know. Once payment has been received, we'll release the pre-authorization hold on your credit card. Most of our clients choose to pay by credit card because it's convenient—you can simply set it up once and never have to think about it again."
+  },
+  {
+    section: "billing",
+    question: "Do you offer discounts for regular service?",
+    answer: "Yes! We offer discounted pricing on our <strong>Regular Clean</strong> when you schedule recurring service. Weekly, bi-weekly, and monthly cleanings all receive reduced rates, making it the most economical option for maintaining a consistently clean home.<br><br>Our <strong>Premium Custom Clean</strong> is priced the same regardless of frequency because every visit is fully customized to your priorities. Instead of paying separately for common add-ons such as inside the fridge, oven, laundry, or other household tasks, you simply choose how you'd like your booked cleaning time to be used.<br><br>If you're looking for the best value for ongoing home maintenance, our <strong>Regular Clean</strong> is an excellent choice. If you prefer complete flexibility and the freedom to change your priorities every visit, our <strong>Premium Custom Clean</strong> offers the greatest convenience."
+  },
+  {
+    section: "billing",
+    question: "What if I need to cancel or reschedule?",
+    answer: "We understand that plans change! If you need to cancel or reschedule your appointment, we simply ask for at least <strong>24 hours' notice</strong> whenever possible.<br><br>You can contact our office by phone, email, or reply to any of your appointment reminders, and we'll be happy to help find a new time that works for you. If you've booked online, you can also manage your appointment through your online account.<br><br>Providing advance notice helps us offer your appointment time to another client and keeps our schedule running smoothly for everyone."
+  },
+  {
+    section: "billing",
+    question: "Why doesn't Premium Custom Cleaning receive recurring discounts?",
+    answer: "Our <strong>Premium Custom Clean</strong> is designed to provide complete flexibility, allowing you to customize every visit based on your changing priorities. Unlike our Regular Clean, there are no separate charges for common household tasks such as inside the fridge, oven, laundry, interior windows, dishes, or organizing—as long as it fits within your booked cleaning time.<br><br>Because every Premium Custom Clean is unique, the time and focus of each visit can vary significantly. Our <strong>Regular Clean</strong>, on the other hand, follows a consistent checklist every visit, allowing us to accurately schedule the service and offer discounted pricing for weekly, bi-weekly, and monthly recurring cleanings.<br><br>Both services provide the same high-quality professional cleaning—the difference is whether you value complete flexibility or a consistent maintenance plan with recurring discounts."
+  },
+  {
+    section: "billing",
+    question: "When is my credit card charged?",
+    answer: "We place a temporary pre-authorization hold on your credit card the day before your scheduled cleaning to verify your payment method. Your card is <strong>not charged</strong> at that time.<br><br>Once your cleaning has been completed, we'll review the appointment, make any necessary adjustments, and then process the final payment. This ensures you're only charged for the services you actually receive.<br><br>If you choose to pay by cash or e-transfer instead, simply let us know. Once payment has been received, we'll release the pre-authorization hold on your credit card."
+  },
+  {
+    section: "billing",
+    question: "Will I receive an instant quote before booking?",
+    answer: "Yes! Our online booking system provides an instant, no-obligation quote before you confirm your appointment. Simply choose the cleaning service that's right for you, answer a few questions about your home, and your price will be calculated automatically.<br><br>There are no hidden fees or surprises. Any optional services you select are added to your quote in real time, so you'll always know the total cost before completing your booking.<br><br>If you have any questions or your cleaning needs are unique, we're always happy to help. Just give us a call, and we'll be happy to assist."
+  },
+
+  // Office requests
+  {
+    section: "other services",
+    question: "Do you clean offices or commercial buildings?",
+    answer: "Yes, we do provide commercial cleaning services for select clients. However, our primary focus is residential cleaning, including homes, condos, townhomes, move-in/move-out cleanings, and Airbnb & rental turnovers.<br><br>By specializing in residential cleaning, we're able to provide a higher level of consistency, attention to detail, and customer service for homeowners throughout the Fraser Valley.<br><br>If you're looking for commercial cleaning services, we'd be happy to discuss your needs and let you know if your property is a good fit for our team."
   },
 ];
 
@@ -122,7 +218,7 @@ const sectionNames = {
   general: "General",
   services: "Services", 
   billing: "Billing",
-  "office requests": "Office Request"
+  "other services": "Other Services"
 };
 
 let currentOpenFAQ = null;

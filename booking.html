@@ -29,7 +29,10 @@
                 <a href="about.html">About</a>
               </li>
               <li>
-                <a href="checklist.html">Checklists</a>
+                <a href="checklist.html">Services</a>
+              </li>
+              <li>
+                <a href="index.html#reviews">Reviews</a>
               </li>
               <li>
                 <a href="faqs.html">FAQs</a>
@@ -51,7 +54,8 @@
         </div>
         <ul class="nav-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="checklist.html">Checklists</a></li>
+          <li><a href="checklist.html">Services</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="giftcard.html">Gift Card</a></li>
           <li><a href="http://tidyfox.launch27.com/login">Log In</a></li>
@@ -102,23 +106,9 @@
         <h3 class="booking-mobile-subtitle">Instant quote at bottom of page</h3>
       </div>
 
-      <!-- Launch27 Booking Widget -->
-      <div class="booking-widget-container">
-        <!-- Launch27 Official Embed Code -->
-        <script src="https://tidyfox.launch27.com/jsbundle"></script>
-        <iframe
-          id="booking-widget-iframe"
-          src="https://tidyfox.launch27.com/?w_cleaning"
-          style="
-            border: none;
-            width: 100%;
-            min-height: 2739px;
-            overflow: hidden;
-          "
-          scrolling="no"
-          title="Book Your Cleaning Service"
-        >
-        </iframe>
+      <!-- Launch27 Booking Widget (same load order as live tidyfox.ca) -->
+      <div class="booking-widget-container" id="booking-widget-container">
+        <script src="js/booking-page.js"></script>
       </div>
     </div>
 
@@ -133,7 +123,7 @@
           <p class="footer-links">
             <a href="index.html" class="link-1">Home</a>
 
-            <a href="checklist.html">Checklists</a>
+            <a href="checklist.html">Services</a>
 
             <a href="giftcard.html">Gift Card</a>
 

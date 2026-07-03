@@ -3,21 +3,18 @@ document.addEventListener("DOMContentLoaded", () => {
   if (!tabsRoot) return;
 
   const tablist = tabsRoot.querySelector(".checklist-tab-list");
-  const pairRegularMove = tablist?.querySelector(
-    '[data-checklist-pair="regular-move"]',
+  const pairPremiumRegular = tablist?.querySelector(
+    '[data-checklist-pair="premium-regular"]',
   );
-  const pairRentalHourly = tablist?.querySelector(
-    '[data-checklist-pair="rental-hourly"]',
+  const pairMoveAirbnb = tablist?.querySelector(
+    '[data-checklist-pair="move-airbnb"]',
   );
   const mqMobile = window.matchMedia("(max-width: 640px)");
 
-  const PAIR_REGULAR_MOVE = new Set([
-    "regular-clean",
+  const PAIR_PREMIUM_REGULAR = new Set(["hourly-clean", "regular-clean"]);
+  const PAIR_MOVE_AIRBNB = new Set([
     "move-in-out-clean",
-  ]);
-  const PAIR_RENTAL_HOURLY = new Set([
     "rental-airbnb-clean",
-    "hourly-clean",
   ]);
 
   const getButtons = () =>
@@ -25,19 +22,42 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const panels = Array.from(tabsRoot.querySelectorAll(".checklist-tab-panel"));
 
+  const setPairRows = (frontPair, backPair) => {
+    frontPair.classList.add("is-front-row");
+    frontPair.classList.remove("is-back-row");
+    backPair.classList.add("is-back-row");
+    backPair.classList.remove("is-front-row");
+
+    // Back row first in DOM, front row last (overlap styles)
+    tablist.appendChild(backPair);
+    tablist.appendChild(frontPair);
+  };
+
+  const clearPairRows = () => {
+    [pairPremiumRegular, pairMoveAirbnb].forEach((pair) => {
+      if (!pair) return;
+      pair.classList.remove("is-front-row", "is-back-row");
+    });
+  };
+
   const syncMobileTabStack = () => {
-    if (!pairRegularMove || !pairRentalHourly || !mqMobile.matches) return;
+    if (!pairPremiumRegular || !pairMoveAirbnb) return;
+
+    if (!mqMobile.matches) {
+      clearPairRows();
+      return;
+    }
 
     const active = getButtons().find((b) => b.classList.contains("active"));
-    const activeId = active?.dataset.tabTarget;
+    const activeId =
+      active?.getAttribute("data-tab-target") || active?.dataset?.tabTarget;
     if (!activeId) return;
 
-    if (PAIR_REGULAR_MOVE.has(activeId)) {
-      tablist.appendChild(pairRentalHourly);
-      tablist.appendChild(pairRegularMove);
-    } else if (PAIR_RENTAL_HOURLY.has(activeId)) {
-      tablist.appendChild(pairRegularMove);
-      tablist.appendChild(pairRentalHourly);
+    // Active pair is always the front (bottom) row.
+    if (PAIR_PREMIUM_REGULAR.has(activeId)) {
+      setPairRows(pairPremiumRegular, pairMoveAirbnb);
+    } else if (PAIR_MOVE_AIRBNB.has(activeId)) {
+      setPairRows(pairMoveAirbnb, pairPremiumRegular);
     }
   };
 
@@ -59,7 +79,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   getButtons().forEach((button) => {
     button.addEventListener("click", () => {
-      const targetId = button.dataset.tabTarget;
+      const targetId =
+        button.getAttribute("data-tab-target") || button.dataset.tabTarget;
       if (!targetId) return;
       setActiveTab(targetId);
     });
@@ -69,7 +90,11 @@ document.addEventListener("DOMContentLoaded", () => {
     syncMobileTabStack();
   };
 
-  mqMobile.addEventListener("change", onViewportChange);
+  if (mqMobile.addEventListener) {
+    mqMobile.addEventListener("change", onViewportChange);
+  } else if (mqMobile.addListener) {
+    mqMobile.addListener(onViewportChange);
+  }
   window.addEventListener("resize", onViewportChange);
 
   syncMobileTabStack();

@@ -43,7 +43,10 @@
                 <a href="about.html">About</a>
               </li>
               <li>
-                <a href="checklist.html">Checklists</a>
+                <a href="checklist.html">Services</a>
+              </li>
+              <li>
+                <a href="index.html#reviews">Reviews</a>
               </li>
               <li>
                 <a href="faqs.html">FAQs</a>
@@ -65,7 +68,8 @@
         </div>
         <ul class="nav-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="checklist.html">Checklists</a></li>
+          <li><a href="checklist.html">Services</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="giftcard.html">Gift Card</a></li>
           <li><a href="http://tidyfox.launch27.com/login">Log In</a></li>
@@ -110,8 +114,11 @@
     <div class="hero-section">
       <div class="hero-content">
         <h1>
-          Best Cleaning Company in the<br class="mobile-break" />
-          Fraser Valley
+          <strong
+            >Tidy Fox<br class="mobile-break" />
+            Cleaning Services</strong
+          ><br />Serving Abbotsford • Mission • Chilliwack • Langley •
+          Aldergrove
         </h1>
         <div class="hero-image-mobile">
           <img
@@ -125,13 +132,18 @@
           TO ENJOY LIFE.
         </h2>
         <!-- <h2 class="hero-overlap">Tidy Home. Free Time. <br />Peace of Mind.</h2> -->
-        <h3>Like over 360 of our clients already do.</h3>
-        <!-- <h3>Let our trained pros handle the mess so you can enjoy life.</h3> -->
         <h3>
-          Proudly serving Abbotsford, Langley,<br class="mobile-break" />
-          Chilliwack, Aldergrove and Mission.
+          Trusted by over <strong>420 homeowners</strong> for reliable,
+          professional residential cleaning.
+        </h3>
+        <h3>
+          Premium Custom Cleaning • Regular Cleaning • Move-In/Out Cleaning •
+          Airbnb Turnovers
         </h3>
         <div class="cta-stack">
+          <p class="hero-cta-note">
+            Get an instant online quote and book in just a few minutes.
+          </p>
           <a href="booking.html" class="booking-btn-link">
             <button class="booking-btn hero-booking-btn">
               Book Your Clean, Now
@@ -184,8 +196,10 @@
             </div>
           </a>
           <div class="hero-reviews">
-            450+
-            <span class="review-stars">★★★★★</span>Reviews
+            <div class="hero-reviews-rating">
+              <span class="review-stars">★★★★★</span>
+              <span>5.0 Google Rating • 90+ Reviews </span>
+            </div>
           </div>
         </div>
       </div>
@@ -207,9 +221,93 @@
       <img src="images/stripe-grey.webp" alt="Stripe Logo" />
     </div>
 
+    <!-- Services Section -->
+    <section class="services-section">
+      <h2 class="services-section-title">
+        Choose the Cleaning Service<br class="desktop-break" />
+        That's Right for You
+      </h2>
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-card-image">
+            <img
+              src="images/home-cleaning-checklist.jpg"
+              alt="Premium Custom Clean"
+            />
+          </div>
+          <div class="service-card-body">
+            <h3>Premium Custom Clean</h3>
+            <p>
+              Complete flexibility. You decide what gets cleaned every visit.
+            </p>
+            <a
+              href="booking.html"
+              data-service-key="premium"
+              class="service-card-booking-btn"
+              >Book Premium Custom Clean</a
+            >
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-image">
+            <img src="images/KitchenClean.avif" alt="Regular Clean" />
+          </div>
+          <div class="service-card-body">
+            <h3>Regular Clean</h3>
+            <p>
+              Consistent checklist-based maintenance with recurring discounts.
+            </p>
+            <a
+              href="booking.html"
+              data-service-key="regular"
+              class="service-card-booking-btn"
+              >Book Regular Clean</a
+            >
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-image">
+            <img src="images/Move out Kitchen.jpg" alt="Move-In/Out Clean" />
+          </div>
+          <div class="service-card-body">
+            <h3>Move-In/Out Clean</h3>
+            <p>
+              Detailed top-to-bottom cleaning for homes that need a fresh start.
+            </p>
+            <a
+              href="booking.html"
+              data-service-key="move"
+              class="service-card-booking-btn"
+              >Book Move-In/Out Clean</a
+            >
+          </div>
+        </article>
+
+        <article class="service-card">
+          <div class="service-card-image">
+            <img src="images/AirbnbKitchen.webp" alt="Airbnb Turnovers" />
+          </div>
+          <div class="service-card-body">
+            <h3>Airbnb Turnovers</h3>
+            <p>Fast, reliable guest-ready resets between stays.</p>
+            <a
+              href="booking.html"
+              data-service-key="airbnb"
+              class="service-card-booking-btn"
+              >Book Airbnb Turnovers</a
+            >
+          </div>
+        </article>
+      </div>
+    </section>
+
     <!-- Features Section -->
     <section class="features">
-      <h2 class="features-title">What Sets Us Apart</h2>
+      <h2 class="features-title">
+        Why Choose <strong>Tidy Fox Cleaning Services</strong>
+      </h2>
       <div class="features-row">
         <div class="feature">
           <div class="feature-header">
@@ -301,9 +399,11 @@
 
     <!-- Reviews Section -->
     <section class="reviews">
-      <h2 class="reviews-title">Why 360+ People Have Used Tidy Fox Cleaning</h2>
+      <h2 class="reviews-title" id="reviews">
+        Why 420+ People Have Used <strong>Tidy Fox Cleaning Services</strong>
+      </h2>
       <div class="google-reviews">
-        <span class="review-stars">★★★★★</span>5.0 rating on Google with over 80
+        <span class="review-stars">★★★★★</span>5.0 rating on Google with over 90
         reviews
       </div>
 
@@ -355,7 +455,7 @@
           <div class="statistics–single">
             <div class="stat-top-section">
               <div class="stat-number-line">
-                <span class="statistics–single__data–number" data-number="360"
+                <span class="statistics–single__data–number" data-number="420"
                   >0</span
                 ><span class="stat-symbol">+</span>
               </div>
@@ -367,7 +467,7 @@
           <div class="statistics–single">
             <div class="stat-top-section">
               <div class="stat-number-line">
-                <span class="statistics–single__data–number" data-number="4000"
+                <span class="statistics–single__data–number" data-number="4500"
                   >0</span
                 ><span class="stat-symbol">+</span>
               </div>
@@ -402,15 +502,14 @@
         <div class="What-We-Offer-row">
           <div class="What-We-Offer-column">
             <ul class="What-We-Offer-list">
-              <li>50‑Point Checklist Clean</li>
+              <li>Premium Custom Clean (Recommended)</li>
+              <li>40+ Point Checklist Clean (Regular Clean)</li>
               <li>Instant Price Quote Online</li>
               <li>Move‑In/Out Full-Service Clean</li>
-              <li>Hourly Custom Clean</li>
               <li>Weekly, Bi‑Weekly & Monthly Recurring Discounted Plans</li>
               <li>One‑Time / Occasional cleanings</li>
               <li>Inside-Oven and Fridge Clean</li>
               <li>Inside Dishwasher Clean</li>
-              <li>Washer & Dryer Interior Clean</li>
 
               <!-- <li>Cabinet & Closet Interior Wipe</li> -->
             </ul>
@@ -425,8 +524,7 @@
               <!-- <li>Ceiling Fan Dusting (&lt;10 ft)</li> -->
               <li>Blind Wet-Wipe Clean</li>
               <li>Spot-Clean Walls</li>
-              <li>Vacuum Wall & Ceiling Vents</li>
-              <li>Cobweb Removal</li>
+              <li>Washer & Dryer Interior Clean</li>
             </ul>
           </div>
         </div>
@@ -479,7 +577,7 @@
           <p class="footer-links">
             <a href="index.html" class="link-1">Home</a>
 
-            <a href="checklist.html">Checklists</a>
+            <a href="checklist.html">Services</a>
 
             <a href="giftcard.html">Gift Card</a>
 
@@ -538,5 +636,7 @@
     <script src="js/reviews.js"></script>
     <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
     <script src="js/hamburger-menu.js"></script>
+    <script src="js/service-booking-config.js"></script>
+    <script src="js/service-booking-links.js"></script>
   </body>
 </html>

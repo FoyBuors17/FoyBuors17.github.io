@@ -29,7 +29,10 @@
                 <a href="about.html">About</a>
               </li>
               <li>
-                <a href="checklist.html">Checklists</a>
+                <a href="checklist.html">Services</a>
+              </li>
+              <li>
+                <a href="index.html#reviews">Reviews</a>
               </li>
               <li>
                 <a href="faqs.html">FAQs</a>
@@ -51,7 +54,8 @@
         </div>
         <ul class="nav-links">
           <li><a href="about.html">About</a></li>
-          <li><a href="checklist.html" class="active">Checklists</a></li>
+          <li><a href="checklist.html" class="active">Services</a></li>
+          <li><a href="index.html#reviews">Reviews</a></li>
           <li><a href="faqs.html">FAQs</a></li>
           <li><a href="giftcard.html">Gift Card</a></li>
           <li><a href="http://tidyfox.launch27.com/login">Log In</a></li>
@@ -99,7 +103,7 @@
         class="checklist-hero-image"
       />
       <div class="checklist-content">
-        <h2>Every Nook. Every Corner. <br />Nothing Unchecked.</h2>
+        <h2>Choose the Cleaning Service <br />That's Right for You</h2>
         <div class="checklist-tabs" data-tabs>
           <div class="checklist-tab-header">
             <div class="checklist-tab-list-wrap">
@@ -109,43 +113,10 @@
                 aria-label="Checklist types"
               >
                 <div
-                  class="checklist-tab-pair"
-                  data-checklist-pair="rental-hourly"
+                  class="checklist-tab-pair is-back-row"
+                  data-checklist-pair="move-airbnb"
                   role="presentation"
                 >
-                  <button
-                    type="button"
-                    class="checklist-tab-button"
-                    data-tab-target="rental-airbnb-clean"
-                    role="tab"
-                    aria-selected="false"
-                  >
-                    Rental/Airbnb
-                  </button>
-                  <button
-                    type="button"
-                    class="checklist-tab-button"
-                    data-tab-target="hourly-clean"
-                    role="tab"
-                    aria-selected="false"
-                  >
-                    Hourly Clean
-                  </button>
-                </div>
-                <div
-                  class="checklist-tab-pair"
-                  data-checklist-pair="regular-move"
-                  role="presentation"
-                >
-                  <button
-                    type="button"
-                    class="checklist-tab-button active"
-                    data-tab-target="regular-clean"
-                    role="tab"
-                    aria-selected="true"
-                  >
-                    Regular Clean
-                  </button>
                   <button
                     type="button"
                     class="checklist-tab-button"
@@ -153,7 +124,51 @@
                     role="tab"
                     aria-selected="false"
                   >
-                    Move In/Out Clean
+                    <span class="checklist-tab-button-label"
+                      >Move In/Out Clean</span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="checklist-tab-button"
+                    data-tab-target="rental-airbnb-clean"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    <span class="checklist-tab-button-label"
+                      >Airbnb &amp; Rental<br class="mobile-break" />
+                      Turnover</span
+                    >
+                  </button>
+                </div>
+                <div
+                  class="checklist-tab-pair is-front-row"
+                  data-checklist-pair="premium-regular"
+                  role="presentation"
+                >
+                  <button
+                    type="button"
+                    class="checklist-tab-button active"
+                    data-tab-target="hourly-clean"
+                    role="tab"
+                    aria-selected="true"
+                  >
+                    <span class="checklist-tab-button-label"
+                      >Premium Custom Clean<span class="tab-recommended">
+                        (Recommended)</span
+                      ></span
+                    >
+                  </button>
+                  <button
+                    type="button"
+                    class="checklist-tab-button"
+                    data-tab-target="regular-clean"
+                    role="tab"
+                    aria-selected="false"
+                  >
+                    <span class="checklist-tab-button-label"
+                      >Regular Clean</span
+                    >
                   </button>
                 </div>
               </div>
@@ -164,15 +179,25 @@
           <div class="checklist-tab-panels">
             <section
               id="regular-clean"
-              class="checklist-tab-panel active"
+              class="checklist-tab-panel"
               role="tabpanel"
+              aria-hidden="true"
             >
               <h1>Regular Clean</h1>
+              <p class="checklist-tab-tagline">
+                Prefer a set-it-and-forget-it approach?
+              </p>
               <h3>
-                Our cleaning checklist is designed to be as thorough as it gets!
-                Every nook, corner and cranny is checked to make sure that your
-                home receives a thorough and effective cleaning by your Tidy Fox
-                Cleaning team.
+                Our cleaning checklist is designed to deliver a consistent,
+                thorough clean every visit. Every room is cleaned using our
+                proven process so you can enjoy a beautifully maintained home
+                without having to think about it.
+                <br /><br />
+                Whether you schedule weekly, bi-weekly, or monthly service, our
+                Regular Clean follows the same professional checklist each time,
+                ensuring nothing gets overlooked. It's the perfect solution for
+                busy homeowners who want reliable, predictable results and the
+                best value through recurring service discounts.
               </h3>
               <br /><br />
 
@@ -385,12 +410,20 @@
               aria-hidden="true"
             >
               <h1>Move In/Out Clean</h1>
+              <p class="checklist-tab-tagline">Ready for a Fresh Start?</p>
               <h3>
-                Our Move In/Out Clean is a more detailed clean for empty homes
-                that need extra attention before moving in, selling, or
-                finishing a lease. It goes beyond our regular checklist by
-                focusing on built-up dust, inside appliances, cupboards, and the
-                areas that matter most before a move-out inspection.
+                Moving is stressful enough—let us handle the cleaning. Our
+                Move-In/Move-Out Clean is designed to prepare your home for its
+                next chapter with a comprehensive top-to-bottom clean.
+                <br /><br />
+                Whether you're moving into a new home, preparing to sell, or
+                completing a lease, our Move-In/Move-Out Clean goes beyond our
+                Regular Clean by including the inside of appliances, cabinets,
+                closets, and other areas often overlooked during everyday
+                cleaning. For homes that need additional attention, optional
+                Premium Restoration Services are available to tackle heavy
+                grease, post-renovation dust, full wall washing, windows,
+                blinds, garages, and more.
               </h3>
               <br /><br />
 
@@ -559,8 +592,12 @@
               <!-- Premium add-ons (accented vs included extras) -->
               <div class="additional-services additional-services--premium">
                 <h4 class="additional-services-title">
-                  Premium extras you can add to your move in/out cleaning
+                  Premium Restoration Services
                 </h4>
+                <p class="additional-services-subtitle">
+                  For homes that need additional attention beyond our standard
+                  Move-In/Move-Out Clean.
+                </p>
                 <div class="additional-services-container">
                   <div class="additional-services-grid">
                     <div class="additional-service-item">
@@ -612,20 +649,11 @@
                         <p>A Detailed Wash of all walls.</p>
                       </div>
                     </div>
+                  </div>
 
-                    <div class="additional-service-item">
-                      <div class="additional-service-icon">
-                        <img
-                          src="images/Wall Spot Clean.png"
-                          alt="Premium extra 5"
-                        />
-                      </div>
-                      <div class="additional-service-text">
-                        <h4>Wall Spot Clean Upgrade</h4>
-                        <p>Spot Clean of Walls and high touch areas.</p>
-                      </div>
-                    </div>
-
+                  <div
+                    class="additional-services-grid additional-services-grid--three-centered"
+                  >
                     <div class="additional-service-item">
                       <div class="additional-service-icon">
                         <img src="images/Baseboard (1).png" alt="Baseboard" />
@@ -657,8 +685,8 @@
                         />
                       </div>
                       <div class="additional-service-text">
-                        <h4>Post Construction Clean</h4>
-                        <p>A clean after a construction project.</p>
+                        <h4>Post Renovation Clean</h4>
+                        <p>A clean after a renovation project.</p>
                       </div>
                     </div>
                   </div>
@@ -672,11 +700,22 @@
               role="tabpanel"
               aria-hidden="true"
             >
-              <h1>Rental/Airbnb Clean</h1>
+              <h1>Airbnb & Rental Turnover</h1>
+              <p class="checklist-tab-tagline">
+                Every Guest Deserves a Five-Star Welcome
+              </p>
               <h3>
-                Turnover-focused cleaning so your rental or short-stay is
-                guest-ready: high-touch surfaces, refreshed living spaces, and
-                details that help you protect reviews and repeat bookings.
+                Professional turnover cleaning designed to prepare your Airbnb
+                or rental property for every new guest, helping you deliver a
+                consistently clean, welcoming experience.
+                <br /><br />
+                Our Airbnb & Rental Turnover Clean is built around the
+                fast-paced demands of short-term rentals. Every turnover
+                includes professional cleaning, bed making, owner-supplied
+                amenity restocking, and a complete guest-ready reset. Optional
+                laundry and Deep Reset services are available for properties
+                that require additional attention, helping you protect your
+                reviews and keep guests coming back.
               </h3>
               <br /><br />
 
@@ -789,13 +828,86 @@
                 </div>
               </div>
 
-              <!-- Add-on icons: drop files in images/ — Laundry.png, Restocking.png, DeepReset.png, Windows.png -->
-              <div class="additional-services">
+              <!-- Included extras (blue outline, same as Move In/Out) -->
+              <div
+                class="additional-services additional-services--move-outline"
+              >
                 <h4 class="additional-services-title">
-                  Add-ons for Rental / Airbnb turnover
+                  Every Turnover Includes
                 </h4>
                 <div class="additional-services-container">
                   <div class="additional-services-grid">
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/professionalcleaning.jpg"
+                          alt="Professional Cleaning"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Professional Cleaning</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/bed.png" alt="Bed Making" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Bed Making</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/Restocking.png"
+                          alt="Owner-Supplied Restocking"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Owner-Supplied Restocking</h4>
+                      </div>
+                    </div>
+
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img
+                          src="images/guestready.jpg"
+                          alt="Guest Ready Reset"
+                        />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Guest Ready Reset</h4>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Optional add-ons (premium style) -->
+              <div class="additional-services additional-services--premium">
+                <h4 class="additional-services-title">
+                  Optional Turnover Services
+                </h4>
+                <p class="additional-services-subtitle">
+                  Customize your turnover with additional services based on your
+                  property's specific needs.
+                </p>
+                <div class="additional-services-container">
+                  <div
+                    class="additional-services-grid additional-services-grid--three-centered"
+                  >
+                    <div class="additional-service-item">
+                      <div class="additional-service-icon">
+                        <img src="images/window.png" alt="Windows" />
+                      </div>
+                      <div class="additional-service-text">
+                        <h4>Interior Window Package</h4>
+                        <p>Interior glass, sills, and tracks cleaned.</p>
+                      </div>
+                    </div>
+
                     <div class="additional-service-item">
                       <div class="additional-service-icon">
                         <img
@@ -805,18 +917,10 @@
                       </div>
                       <div class="additional-service-text">
                         <h4>Wash and Dry Linens</h4>
-                      </div>
-                    </div>
-
-                    <div class="additional-service-item">
-                      <div class="additional-service-icon">
-                        <img
-                          src="images/Restocking.png"
-                          alt="Restocking Service"
-                        />
-                      </div>
-                      <div class="additional-service-text">
-                        <h4>Restocking Service</h4>
+                        <p>
+                          Wash, dry, and prepare linens and towels for your next
+                          guests.
+                        </p>
                       </div>
                     </div>
 
@@ -828,16 +932,11 @@
                         />
                       </div>
                       <div class="additional-service-text">
-                        <h4>Deep Reset Add-On</h4>
-                      </div>
-                    </div>
-
-                    <div class="additional-service-item">
-                      <div class="additional-service-icon">
-                        <img src="images/window.png" alt="Windows" />
-                      </div>
-                      <div class="additional-service-text">
-                        <h4>Windows</h4>
+                        <h4>Deep Reset</h4>
+                        <p>
+                          Perfect for properties that need extra attention after
+                          a difficult stay.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -847,12 +946,115 @@
 
             <section
               id="hourly-clean"
-              class="checklist-tab-panel"
+              class="checklist-tab-panel active"
               role="tabpanel"
-              aria-hidden="true"
             >
-              <h1>Hourly Clean</h1>
-              <h3>Details coming soon.</h3>
+              <h1>Premium Custom Clean</h1>
+              <p class="checklist-tab-tagline">
+                Your Priorities, Your Schedule, Your Clean
+              </p>
+              <h3>
+                Our Premium Custom Clean gives you complete control over your
+                cleaning experience. Simply choose the amount of time you'd
+                like, and our team will focus on the areas and tasks that matter
+                most to you.
+                <br /><br />
+                Every home is different, and your priorities may change from
+                visit to visit. Whether you'd like extra attention on the
+                kitchen, bathrooms, bedrooms, or specialty tasks such as inside
+                the fridge or oven, we'll make the most of your booked time and
+                tailor the cleaning to your needs.
+              </h3>
+              <br /><br />
+
+              <!-- Checklist Section — swap placeholder images in images/ when ready -->
+              <div class="checklist-section">
+                <div class="checklist-section-container">
+                  <!-- Why Clients Love -->
+                  <div
+                    class="checklist-section-row checklist-section-row--text-wide"
+                  >
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/prioritylist.png"
+                        alt="Premium Custom Clean — placeholder image"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>Why Clients Love Our Premium Custom Clean</h4>
+                      <ul class="checklist-section-list checklist-feature-list">
+                        <li>
+                          <strong>Complete Flexibility</strong>
+                          Choose what gets cleaned every visit based on your
+                          priorities.
+                        </li>
+                        <li>
+                          <strong>All Tasks Included</strong>
+                          Whether it's inside the fridge, oven, interior
+                          windows, laundry, or general housekeeping, we'll focus
+                          on whatever priorities you choose during your booked
+                          time.
+                        </li>
+                        <li>
+                          <strong>Your Cleaning, Your Way</strong>
+                          Your priorities can change from visit to visit, and
+                          we'll tailor the cleaning to suit your needs.
+                        </li>
+                        <li>
+                          <strong>Simple, Transparent Pricing</strong>
+                          $65 per cleaner, per hour, with a minimum booking of
+                          two cleaners for one hour.
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <!-- Popular Requests -->
+                  <div
+                    class="checklist-section-row checklist-section-row-reverse"
+                  >
+                    <div class="checklist-section-column">
+                      <h4>Popular Requests</h4>
+                      <ul class="checklist-section-list">
+                        <li>General housekeeping</li>
+                        <li>Kitchen cleaning</li>
+                        <li>Inside refrigerators</li>
+                        <li>Inside ovens</li>
+                        <li>Laundry and folding</li>
+                        <li>Bathrooms and showers</li>
+                        <li>Interior windows</li>
+                        <li>Bedrooms and bed changes</li>
+                        <li>Seasonal touch-ups and special projects</li>
+                      </ul>
+                    </div>
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/quad image.png"
+                        alt="Popular cleaning requests — placeholder image"
+                      />
+                    </div>
+                  </div>
+
+                  <!-- How It Works -->
+                  <div class="checklist-section-row">
+                    <div class="checklist-section-image">
+                      <img
+                        src="images/Super-House-Interior.jpg"
+                        alt="How Premium Custom Clean works — placeholder image"
+                      />
+                    </div>
+                    <div class="checklist-section-column">
+                      <h4>How It Works</h4>
+                      <ul class="checklist-section-list">
+                        <li>Choose the amount of time you'd like.</li>
+                        <li>Tell us your priorities.</li>
+                        <li>Our team focuses on what matters most to you.</li>
+                        <li>Enjoy a home cleaned your way.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </section>
           </div>
         </div>
@@ -870,7 +1072,7 @@
           <p class="footer-links">
             <a href="index.html" class="link-1">Home</a>
 
-            <a href="checklist.html">Checklists</a>
+            <a href="checklist.html">Services</a>
 
             <a href="giftcard.html">Gift Card</a>
 
