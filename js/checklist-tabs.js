@@ -61,6 +61,24 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   };
 
+  const scrollToTabTop = () => {
+    // Panels are not sticky — use them for document position (sticky tabs
+    // make getBoundingClientRect() useless for scroll math when stuck).
+    const panelsEl = tabsRoot.querySelector(".checklist-tab-panels");
+    const header = tabsRoot.querySelector(".checklist-tab-header");
+    if (!panelsEl) return;
+
+    const navbar = document.querySelector(".navbar");
+    const navH = navbar ? navbar.offsetHeight : 0;
+    const headerH = header ? header.offsetHeight : 0;
+    const panelsDocTop =
+      panelsEl.getBoundingClientRect().top + window.pageYOffset;
+    // Sit tab bar under navbar; panel content starts at the top below it
+    const top = Math.max(0, panelsDocTop - headerH - navH);
+
+    window.scrollTo(0, top);
+  };
+
   const setActiveTab = (targetId) => {
     getButtons().forEach((button) => {
       const isActive = button.dataset.tabTarget === targetId;
@@ -83,6 +101,10 @@ document.addEventListener("DOMContentLoaded", () => {
         button.getAttribute("data-tab-target") || button.dataset.tabTarget;
       if (!targetId) return;
       setActiveTab(targetId);
+      // Wait for panel/layout update, then scroll to top of tab
+      window.requestAnimationFrame(() => {
+        scrollToTabTop();
+      });
     });
   });
 
