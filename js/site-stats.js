@@ -1,14 +1,16 @@
 /**
  * Central site stats — update values here; they fill in across the site.
  *
- * googleReviews      → "100+ Reviews", "over 100 reviews", FAQ copy, etc.
- * satisfiedClients   → "450+", "over 450 homeowners", stats counter, etc.
- * cleaningsCompleted → "4500+" stats counter
+ * googleReviews       → "100+ Reviews", "over 100 reviews", FAQ copy, etc.
+ * satisfiedClients    → "450+", "over 450 homeowners", stats counter, etc.
+ * cleaningsCompleted  → "4650+" stats counter
+ * combinedReviews     → "450+" Google and Launch27 Reviews Combined
  */
 window.TIDYFOX_SITE_STATS = {
   googleReviews: 100,
   satisfiedClients: 450,
   cleaningsCompleted: 4650,
+  combinedReviews: 475,
 };
 
 (function () {
@@ -33,6 +35,10 @@ window.TIDYFOX_SITE_STATS = {
     return formatStat("cleaningsCompleted", format);
   }
 
+  function formatCombinedReviews(format) {
+    return formatStat("combinedReviews", format);
+  }
+
   function applyTextStats(attr, formatter) {
     document.querySelectorAll("[" + attr + "]").forEach(function (el) {
       var format = el.getAttribute(attr) || "number";
@@ -51,15 +57,18 @@ window.TIDYFOX_SITE_STATS = {
     applyTextStats("data-google-reviews", formatGoogleReviews);
     applyTextStats("data-satisfied-clients", formatSatisfiedClients);
     applyTextStats("data-cleanings-completed", formatCleaningsCompleted);
+    applyTextStats("data-combined-reviews", formatCombinedReviews);
 
     // Stats counter animation reads data-number — keep it in sync
     syncCounter("data-satisfied-clients-count", "satisfiedClients");
     syncCounter("data-cleanings-completed-count", "cleaningsCompleted");
+    syncCounter("data-combined-reviews-count", "combinedReviews");
   }
 
   window.TIDYFOX_formatGoogleReviews = formatGoogleReviews;
   window.TIDYFOX_formatSatisfiedClients = formatSatisfiedClients;
   window.TIDYFOX_formatCleaningsCompleted = formatCleaningsCompleted;
+  window.TIDYFOX_formatCombinedReviews = formatCombinedReviews;
 
   if (document.readyState === "loading") {
     document.addEventListener("DOMContentLoaded", applySiteStats);
