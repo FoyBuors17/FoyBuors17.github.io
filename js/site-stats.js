@@ -1,16 +1,16 @@
 /**
  * Central site stats — update values here; they fill in across the site.
  *
- * googleReviews       → "100+ Reviews", "over 100 reviews", FAQ copy, etc.
- * satisfiedClients    → "450+", "over 450 homeowners", stats counter, etc.
- * cleaningsCompleted  → "4650+" stats counter
- * combinedReviews     → "450+" Google and Launch27 Reviews Combined
+ * googleReviews       → "120+ Reviews", "over 120 reviews", FAQ copy, etc.
+ * satisfiedClients    → "500+", "over 500 homeowners", stats counter, etc.
+ * cleaningsCompleted  → "5000+", "over 5000 cleanings", stats counter, etc.
+ * combinedReviews     → "525+" Google and Launch27 Reviews Combined
  */
 window.TIDYFOX_SITE_STATS = {
-  googleReviews: 100,
-  satisfiedClients: 450,
-  cleaningsCompleted: 4650,
-  combinedReviews: 475,
+  googleReviews: 120,
+  satisfiedClients: 500,  
+  cleaningsCompleted: 5000,
+  combinedReviews: 525, 
 };
 
 (function () {
