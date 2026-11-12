@@ -2,10 +2,43 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 40px;
+    padding-top: calc(40px + var(--site-notice-offset, 0px));
     /* "none" can break vertical scrolling on some Android/Samsung browsers */
     overscroll-behavior-y: auto;
     -webkit-overflow-scrolling: touch;
+}
+
+/* Temporary email-down notice — remove this block when the notice HTML is removed */
+.site-notice-banner {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1300;
+    box-sizing: border-box;
+    width: 100%;
+    margin: 0;
+    padding: 0.7rem 1rem;
+    background-color: #157a90; /* deeper shade of --primary-color */
+    color: #fff;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.98rem;
+    font-weight: 500;
+    line-height: 1.4;
+    border-bottom: 2px solid black;
+}
+
+.site-notice-banner a {
+    color: #fff;
+    font-weight: 700;
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.site-notice-banner a:hover,
+.site-notice-banner a:focus {
+    color: #ffe0b8;
 }
 
 h1 {
@@ -183,7 +216,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     position: fixed;
-    top: 0;
+    top: var(--site-notice-offset, 0px);
     left: 0;
     right: 0;
     z-index: 1000;
@@ -665,7 +698,7 @@ nav {
   }
 
   #reviews {
-    scroll-margin-top: 100px; /* clear fixed navbar when linking to Reviews */
+    scroll-margin-top: calc(100px + var(--site-notice-offset, 0px)); /* clear fixed navbar + notice */
   }
 
   .reviews-row-wrapper {
@@ -1189,7 +1222,7 @@ nav {
 /* Sticky tab row + full-width orange rail (same width as panel / “shadow box”) */
 .checklist-tab-header {
   position: sticky;
-  top: 100px;
+  top: calc(100px + var(--site-notice-offset, 0px));
   z-index: 900;
   isolation: isolate;
   display: flex;
@@ -1760,9 +1793,9 @@ nav {
 
 /* Booking Page Styles */
 .booking-container {
-  padding-top: 60px; /* Account for fixed navbar */
+  padding-top: calc(60px + var(--site-notice-offset, 0px)); /* Account for fixed navbar + notice */
   background: #fff;
-  min-height: calc(100vh - 60px);
+  min-height: calc(100vh - 60px - var(--site-notice-offset, 0px));
 }
 
 .booking-header {
@@ -1865,7 +1898,7 @@ nav {
     -webkit-overflow-scrolling: touch;
     min-height: 100vh;
     min-height: 100dvh;
-    padding-top: 20px;
+    padding-top: calc(20px + var(--site-notice-offset, 0px));
     touch-action: pan-y;
   }
 
@@ -2748,7 +2781,7 @@ nav {
   }
 
   .checklist-tab-header {
-    top: 80px;
+    top: calc(80px + var(--site-notice-offset, 0px));
   }
 
   /* Stacked-folder overlap — match 640px (no gap between pairs) */
@@ -3538,7 +3571,7 @@ nav {
 .faq-sidebar {
   flex: 0 0 250px;
   position: sticky;
-  top: 100px;
+  top: calc(100px + var(--site-notice-offset, 0px));
   background: #f8f9fa;
   border-radius: 8px;
   padding: 1.5rem;

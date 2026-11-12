@@ -2,6 +2,25 @@ let burger = document.getElementById("burger");
 let nav = document.getElementById("main-nav");
 let scrollPosition = 0;
 
+/* Temporary: keep fixed header clear of .site-notice-banner (remove with the banner). */
+(function syncSiteNoticeOffset() {
+  const banner = document.querySelector(".site-notice-banner");
+  if (!banner) {
+    document.documentElement.style.removeProperty("--site-notice-offset");
+    return;
+  }
+
+  function setOffset() {
+    document.documentElement.style.setProperty(
+      "--site-notice-offset",
+      `${banner.offsetHeight}px`
+    );
+  }
+
+  setOffset();
+  window.addEventListener("resize", setOffset);
+})();
+
 function unlockBodyScroll() {
   document.body.style.removeProperty("--body-scroll-lock-top");
 }
@@ -21,7 +40,11 @@ function scrollToReviews() {
   if (!target) return false;
 
   const navbar = document.querySelector(".navbar");
-  const offset = navbar ? navbar.offsetHeight + 12 : 100;
+  const banner = document.querySelector(".site-notice-banner");
+  const offset =
+    (navbar ? navbar.offsetHeight : 100) +
+    (banner ? banner.offsetHeight : 0) +
+    12;
   const top =
     target.getBoundingClientRect().top + window.pageYOffset - offset;
 
