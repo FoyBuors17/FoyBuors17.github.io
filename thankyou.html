@@ -10,11 +10,61 @@
     />
     <title>Tidy Fox Cleaning</title>
     <link rel="icon" type="image/x-icon" href="images/tidyfoxhead.webp" />
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=AW-10881502150"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "AW-10881502150");
+    </script>
     <!-- Event snippet for Clicked on Book in 1 minute conversion page -->
     <script>
-      gtag("event", "conversion", {
-        send_to: "AW-10881502150/mPTtCPy5ncIDEMaX2sQo",
-      });
+      (function () {
+        var SEND_TO = "AW-10881502150/mPTtCPy5ncIDEMaX2sQo";
+        var GUARD_KEY = "tidyfox_gads_conversion";
+        var params = new URLSearchParams(window.location.search);
+        var idKeys = [
+          "booking_id",
+          "bookingId",
+          "transaction_id",
+          "order_id",
+          "orderId",
+          "confirmation_id",
+        ];
+        var transactionId = "";
+        for (var i = 0; i < idKeys.length; i++) {
+          var value = params.get(idKeys[i]);
+          if (value) {
+            transactionId = value;
+            break;
+          }
+        }
+
+        var storageKey = transactionId
+          ? GUARD_KEY + ":" + transactionId
+          : GUARD_KEY;
+        try {
+          if (sessionStorage.getItem(storageKey)) {
+            return;
+          }
+          sessionStorage.setItem(storageKey, "1");
+        } catch (e) {
+          // If storage is blocked, still fire once for this page load.
+        }
+
+        var payload = { send_to: SEND_TO };
+        if (transactionId) {
+          payload.transaction_id = transactionId;
+        }
+        gtag("event", "conversion", payload);
+      })();
     </script>
   </head>
   <body>
